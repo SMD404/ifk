@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="../css/style.css")
+    title ifk-hm
+  body.default-font
+
+block includes
+  include ../../blocks/logo/logo
+  include ../../blocks/button/button
+  include ../../blocks/nav/nav
+  include ../../blocks/callback/callback
+block header
+    header.header
+    .header__inner
+      .header__left
+        +logo({
+        link_image: '../img/logo.png'
+        })
+
+      .header-center
+        +nav({
+        items: [{
+        text: 'Услуги',
+        link: '#',
+        subs: [{
+        text: 'Управление гостиницами',
+        link: '#',
+        },
+        {
+        text: 'Техническое сопровождение',
+        link: '#',
+        },
+        {
+        text: 'Гостиничный франчайзинг',
+        link: '#',
+        },
+        {
+        text: 'Предпроектное консультирование',
+        link: '#',
+        }],
+        },
+        {
+        text: 'Портфолио',
+        link: '#',
+        subs: [{
+        text: 'Управление гостиницами',
+        link: '#',
+        },
+        {
+        text: 'Техническое сопровождение',
+        link: '#',
+        },
+        {
+        text: 'Гостиничный франчайзинг',
+        link: '#',
+        },
+        {
+        text: 'Предпроектное консультирование',
+        link: '#',
+        }],
+        },
+        {
+        text: 'О компании',
+        link: '#',
+        },
+        {
+        text: 'Контакты',
+        link: '#',
+        },
+        {
+        text: 'Блог',
+        link: '#',
+        }]
+        })
+
+      .header-right
+        a(href="tel:74957877001").header-phone + 7 (495) 787-70-01
+        +button({
+        mods: ['header'],
+        text: 'Заказать звонок',
+        })
+        .header-swap-lang
+  
+block body
+
+block footer    
+  div(style='display: none;')
+    include ../../../dist/img/icons/icons.svg
+  script(src="../js/bundle.js")
