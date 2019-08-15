@@ -1,0 +1,3 @@
+mixin input(subData)
+  each item in subData.items
+    input.input-form(placeholder=item.placeholder, class=addClass('input-form', item.mods, item.addClass))

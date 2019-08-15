@@ -1,0 +1,46 @@
+.title {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 50px;
+  color: $black;
+  &_banner{
+    font-size: 40px;
+  }
+  &_item {
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &_callback {
+    margin-bottom: 20px;
+  }
+  &_articles {
+    font-size: 18px;
+    color: #000000;
+    border-radius: 4px;
+    line-height: 20px;
+    padding: 15px 0;
+  }
+  &_subscribe {
+    padding-bottom: 20px;
+  }
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  position: relative;
+  background-color: #F6F6F6;
+    &-right{
+
+    }
+    &-center {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+}

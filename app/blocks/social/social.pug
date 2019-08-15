@@ -1,0 +1,5 @@
+mixin social(data)
+  each item in data.items
+    .social(class=addClass('soc', item.mod, item.addClass))
+      a(href=item.link)
+        svg

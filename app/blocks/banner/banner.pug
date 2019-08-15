@@ -1,0 +1,9 @@
+mixin banner()
+  .banner
+    .banner-background(style="background: url(../img/banner.png)")
+    .banner-inner
+      +breadcrumbs
+      .banner-content
+      if block
+        block
+      else
