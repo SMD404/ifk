@@ -17,6 +17,7 @@ block includes
   include ../../blocks/subscribe/subscribe
   include ../../blocks/input/input
   include ../../blocks/container/container
+  include ../../blocks/callback/callback
 block body
 
 block header
@@ -129,6 +130,66 @@ block header
 
 block footer
   footer.footer
+    .footer__hidden
+      .overlay(close-button)
+      //- +callback({
+      //-   title: 'Оставить заявку ',
+      //-   policy: 'Нажимая на кнопку “Отправить” вы соглашаетесь на обработку персональных данных',
+      //-   wraps: [{
+      //-     mods: ['small'],
+      //-     inputs: [{
+      //-       placeholder: 'Ваше имя',
+      //-       tag: 'input',
+      //-       type: 'text'
+      //-     },{
+      //-       placeholder: 'Ваш e-mail',
+      //-       tag: 'input',
+      //-       type: 'email'
+      //-     },{
+      //-       placeholder: 'Ваш телефон',
+      //-       tag: 'input',
+      //-       type: 'tel'
+      //-     }]
+      //-   },{
+      //-     inputs: [{
+      //-       placeholder: '123',
+      //-       tag: 'select',
+      //-       selects: [{
+      //-         text: 'Усть-Залупинск',
+      //-       },{
+      //-         text: 'Усть-Залупинск',
+      //-       },{
+      //-         text: 'Усть-Залупинск',
+      //-       },{
+      //-         text: 'Усть-Залупинск',
+      //-       }]         
+      //-     },{
+      //-       mods: ['big'],
+      //-       placeholder: 'Опишите ваши пожелания',
+      //-       tag: 'textarea'
+      //-     }]
+      //-   }]
+      //- })
+
+      +callback({
+        title: 'Заказать звонок',
+        policy: 'Нажимая на кнопку “Отправить” вы соглашаетесь на обработку персональных данных',
+        wraps: [{
+          mods: ['medium'],
+          inputs: [{
+            placeholder: 'Ваше имя',
+            tag: 'input',
+            type: 'text'
+          }]
+        },{
+          inputs: [{
+            placeholder: 'Ваш телефон',
+            tag: 'input',
+            type: 'tel'  
+          }]
+        }]
+      })
+    
     .container
       .footer-left
         +logo({
@@ -160,9 +221,6 @@ block footer
           })
 
       .footer-right
-  .articles
-    
-
   div(style='display: none;')
     include ../../../dist/img/icons/icons.svg
   script(src="../js/bundle.js")

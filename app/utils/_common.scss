@@ -11,6 +11,7 @@ body.default-font {
     -webkit-font-smoothing: antialiased;
     color: $black;
     min-height: 100%;
+    overflow-x: hidden;
     input,
     textarea,
     select,

@@ -1,8 +1,17 @@
-$(document).ready(function(){
-  function thanks(){
-    console.log('лох пидор работает')
-  }
+var $ = require('jquery');
 
-  thanks()
+function thanks(){
+  $('.callback__thx').addClass('open')
+}
+
+function close(){
+  $('.footer__hidden').children().fadeOut();
+}
+
+$('[close-button]').click(function(){
+  close();
 })
+
+thanks()
+
 
