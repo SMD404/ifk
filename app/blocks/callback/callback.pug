@@ -1,0 +1,27 @@
+mixin callback(data)
+  .callback(class=addClass('callback', data.mods, data.addClass))
+    .callback__thx
+      .callback__thx-title Спасибо
+      .callback__thx-desc Текст описания
+    .callback__close(close-button)
+      span  
+      span
+    +title({
+      text: data.title
+    })
+    form.callback__form
+      each wrap in data.wraps
+        .callback__input-wrap(class=addClass('callback__input-wrap', wrap.mods, wrap.addClass))
+          each input in wrap.inputs
+            #{input.tag}.callback__input(class=addClass('callback__input',input.mods,input.addClass),type=input.type,placeholder=input.placeholder)
+              if input.tag == 'select'
+                each select in input.selects
+                  option!= select.text
+      .callback__submit
+        .callback__policy!= data.policy
+        +button({
+          text: 'Отправить',
+          mods: ['red'],
+          type: 'button',
+          addClass: 'callback__button'
+        })

@@ -1,0 +1,5 @@
+mixin button(data)
+  button.button(class=addClass('button', data.mods, data.addClass), type=data.type)!= data.text
+    if block
+      block
+    else

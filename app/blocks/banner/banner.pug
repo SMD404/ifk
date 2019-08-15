@@ -1,0 +1,10 @@
+mixin banner(data)
+  .banner
+    each item in data.items
+      .banner-background(class=addClass('banner-background', item.mods, item.addClass), style='background-image: url('+ data.link +')')
+
+      .container
+        .banner-content
+          if block
+            block
+          else

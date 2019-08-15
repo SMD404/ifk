@@ -1,0 +1,45 @@
+.button {
+  font-family: 'Circe';
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 23px;
+  min-width: 120px;
+  box-sizing: border-box;
+  border: 1px solid;
+  text-align: center;
+  border-color: $red;
+  border-radius: 50px;
+  width: auto;
+  padding: 10px 20px;
+  color: $red;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  transition: $transition;
+    &:hover {
+      background-color: $red;
+      color: #fff;
+      transition: $transition;
+    }
+    &_header {
+      margin: 0 20px;
+    }
+    &_red {
+      background-color: $red;
+      color: white;
+      &:hover {
+        background: darken($red,10%);
+        border-color: darken($red,10%);
+        transition: $transition;
+      }
+    }
+    &_m-top {
+      margin-top: 35px;
+    }
+    &_search {
+      border-radius: 0;
+      width: 77px;
+      height: 44px;
+    }
+}

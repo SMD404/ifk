@@ -1,0 +1,8 @@
+mixin articles(data)
+  .articles
+    each item in data.items
+      .articles-img(style="background:url("+item.link+")")
+      .articles-data=item.data
+      +title({
+        text: data.title
+      })

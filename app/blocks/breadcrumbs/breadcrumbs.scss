@@ -1,0 +1,42 @@
+.breadcrumbs-inner {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.breadcrumbs-item {
+  margin: 10px;
+  position: relative;
+  font-weight: bold;
+  color: $gray;
+  text-decoration: none;
+    &:after {
+      content: '';
+      position: absolute;
+      right: -15px;
+      width: 7px;
+      height: 2px;
+      background: $gray;
+      transform: rotate(-45deg);
+      top: 13px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      right: -15px;
+      width: 7px;
+      height: 2px;
+      background: $gray;
+      transform: rotate(45deg);
+      top: 9px;
+    }
+  &:last-child:before,
+  &:last-child:after{
+    display:none;
+  }
+  &.active {
+    color: $red;
+  }
+}

@@ -1,0 +1,8 @@
+mixin icon(data)
+  a(href=data.link, class=classLink)
+    svg.icon(class=data.addClass)
+     use(xlink:href='#icon-' + data.icon)
+//- +icon({
+//-       addClass: 'pagination__arrow-icon',
+//-       icon: 'drop_prev_big'
+//-   })

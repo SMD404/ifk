@@ -1,0 +1,7 @@
+mixin subscribe(subData)
+  each item in subData.items
+    section.subscribe(class=addClass('subscribe', item.mods, item.addClass), style='background-image:url(' + (subData.background) + ')')
+      .container
+          if block
+            block
+          else

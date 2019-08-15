@@ -1,0 +1,60 @@
+extends ../../template/services
+
+block body
+  +banner({
+    link: '../img/background-main.png',
+    items: [{
+      mods: ['no-opacity', 'flex'],
+    }]
+  })
+    +title({
+    mods: ['banner'],
+    text: 'Управление гостиничным бизнесом'
+    })
+    .desc За 10 лет мы накопили большой опыт в управлении бизнесом который поможет добиться успеха вашему бизнесу
+    +button({
+      mods: ['red'],
+      text: ['Отправить заявку']
+    })
+  .container
+    .we-doing
+      +title({
+        text: 'Что мы делаем?'
+      })
+      .we-doing-items
+        .we-doing__item.item_gray
+          a(href="#") 
+          .we-doing__number
+          +title({
+            mods: ['item'],
+            text: 'Контроль проектов'
+          })
+          span.red-line
+          .text Возьмём вашу гостиницу в управление на любой стадии её существования: действующую, строящуюся, проектируемую или даже только планируемую.
+        .we-doing__item.item_gray
+          a(href="#")
+          .we-doing__number
+          +title({
+            mods: ['item'],
+            text: 'Контроль проектов'
+          })
+          span.red-line
+          .text Возьмём вашу гостиницу в управление на любой стадии её существования: действующую, строящуюся, проектируемую или даже только планируемую.
+        .we-doing__item.item_gray
+          a(href="#")
+            .we-doing__number
+            +title({
+              mods: ['item'],
+              text: 'Контроль проектов'
+            })
+            span.red-line
+            .text Возьмём вашу гостиницу в управление на любой стадии её существования: действующую, строящуюся, проектируемую или даже только планируемую.
+        .we-doing__item.item_gray
+          a(href="#")
+            .we-doing__number
+            +title({
+              mods: ['item'],
+              text: 'Контроль проектов'
+            })
+            span.red-line
+            .text Возьмём вашу гостиницу в управление на любой стадии её существования: действующую, строящуюся, проектируемую или даже только планируемую.

@@ -1,0 +1,76 @@
+extends ../../template/main-page
+
+block body
+  main
+    .blog-banner
+      .container
+        +breadcrumbs
+        +title({
+              text: 'Контакты',
+              addClass: 'title__blog',
+            })
+  .form-container
+    .container         
+      +callback({
+        title: 'Оставить заявку ',
+        policy: 'Нажимая на кнопку “Отправить” вы соглашаетесь на обработку персональных данных',
+        wraps: [{
+            mods: ['small'],
+            inputs: [{
+              placeholder: 'Ваше имя',
+              tag: 'input',
+              type: 'text'
+            },{
+              placeholder: 'Ваш e-mail',
+              tag: 'input',
+              type: 'email'
+            },{
+              placeholder: 'Ваш телефон',
+              tag: 'input',
+              type: 'tel'
+            }]
+          },{
+            inputs: [{
+              placeholder: '123',
+              tag: 'select',
+              selects: [{
+                text: 'Номер 1',
+              },{
+                text: 'Номер 1',
+              },{
+                text: 'Номер 1',
+              },{
+                text: 'Номер 1',
+              }]         
+            },{
+              mods: ['big'],
+              placeholder: 'Опишите ваши пожелания',
+              tag: 'textarea'
+            }]
+          }]
+        })
+  +subscribe({
+        background: '../img/subscribe.png',
+        items: [{
+          mods: ['wrapper']
+        }]
+      })
+        +title({
+        mods: ['subscribe'],
+        text: 'Подписывайтесь на новости',
+        addClass: 'text-white'
+        })
+        +input({
+          items: [{
+            mods: ['subscribe'],
+            placeholder: 'Ваше имя',
+        },
+        {
+          placeholder: 'Ваш e-mail',
+        }]
+      })
+        +button({
+            mods: ['red'],
+            text: ['Все отзывы']
+          })
+    
