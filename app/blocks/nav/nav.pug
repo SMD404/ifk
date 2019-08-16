@@ -1,17 +1,37 @@
 mixin nav(data) 
-  nav.header__main-menu 
-    ul
-      each item in data.items 
-        li.header__main-menu-item 
-          a(href=item.link) 
-            != item.text
-          if item.subs
-            .submenu-wrapper
-              ul.header__main-submenu
-                  each sub in item.subs
-                      li.header__main-submenu-item
-                        a(href=sub.link)
-                          != sub.text
+  nav.main-menu
+    each item in data.items
+      .main-menu__item(class=addClass('menu-item', item.mods, item.addClass))
+        a(href=item.link)
+          !=item.text
+        if item.subs
+          .submenu
+            each sub in item.subs
+              .submenu__item
+                a(href=sub.link)
+                  != sub.text
+
+
+
+
+
+
+
+
+
+    //- nav.header__main-menu 
+    //-   ul
+    //-     each item in data.items 
+    //-       li.header__main-menu-item 
+    //-         a(href=item.link) 
+    //-           != item.text
+    //-         if item.subs
+    //-           .submenu-wrapper
+    //-             ul.header__main-submenu
+    //-                 each sub in item.subs
+    //-                     li.header__main-submenu-item
+    //-                       a(href=sub.link)
+    //-                         != sub.text
       
       
       

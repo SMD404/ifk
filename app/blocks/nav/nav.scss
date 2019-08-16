@@ -1,65 +1,52 @@
-.header__main-menu{
-  width: 100%;
-  font-weight: bold;
-  padding: 0 15px;
+.main-menu {
+  display: flex;
+  position: relative;
   height: 100%;
-  &-item {
-    font-size: 16px;
-    position: relative;
-  }
-    & ul {
-      display: flex;
-      justify-content: space-between;
-      margin: 0;
-      padding: 0;
+    &__item {
+      margin: auto 10px;
       height: 100%;
-    }
-      li {
-        list-style-type: none;
-        display: flex;
-        align-items: center;
-        padding: 0 15px;
-      }
-        a {
+      display: flex;
+      align-items: center;
+      position: relative;
+      font-size: 16px;
+      line-height: 24px;
+      color: #2D2D2D;
+      font-weight: bold;
+        & a {
           text-decoration: none;
-          transition: $transition;
-
+          height: 100%;
+          display:flex;
+          align-items: center;
         }
-        a:hover {
-          color: $red;
-          transition: $transition;
-        }
-        li:hover .submenu-wrapper {
-          height: auto;
-          transition: $transition;
-        }
-        & .submenu-wrapper {
-          position: absolute;
-          top: 70px; 
-          left: 0;
-          width: 275px;
-          padding: 0px 15px 15px 15px;
-          height: 0;
-          box-sizing: border-box;
-          transition: $transition;
-          z-index:-1;
-          overflow: hidden;
-          li {
-            padding: 15px;
-          }
-        }
-        
-        & .header__main-submenu {
-          border-radius: 0 0 20px 20px;
-          max-width: 250px;
-          padding: 50px 0 0 0;
-          background-color: $white;
-          box-shadow: $shadow;
-          transition: $transition;
-          display: flex;
-          flex-direction: column;
-        } 
+      &:hover{
+        color: $red;
+      }
+      &:hover .submenu {
+      transform: scaleY(1);
+      transition: $transition;
+    }
+  }
 }
 
-
-
+.submenu {
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  overflow: hidden;
+  position: absolute;
+  top: 100px;
+  transition: $transition;
+  background: $white;
+  color: $black;
+  box-shadow: 0px 12px 13px rgba(0, 0, 0, 0.114);
+  border-radius: 0px 0px 10px 10px;
+  z-index: 10;
+  padding: 0 20px;
+  width: 257px;
+    &__item {
+      text-decoration: none;
+      padding: 14px 0;
+      &:hover a {
+        color: $red;
+      }
+    }
+}
