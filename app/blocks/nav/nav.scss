@@ -2,6 +2,8 @@
   display: flex;
   position: relative;
   height: 100%;
+  width: 100%;
+  justify-content: space-around;
     &__item {
       margin: auto 10px;
       height: 100%;
@@ -37,7 +39,7 @@
   transition: $transition;
   background: $white;
   color: $black;
-  box-shadow: 0px 12px 13px rgba(0, 0, 0, 0.114);
+  box-shadow: 0px 20px 13px rgba(0, 0, 0, 0.114);
   border-radius: 0px 0px 10px 10px;
   z-index: 10;
   padding: 0 20px;
@@ -49,4 +51,10 @@
         color: $red;
       }
     }
+}
+
+@media screen and (max-width: 992px){
+  .main-menu {
+    display: none;
+  }
 }

@@ -115,11 +115,13 @@ block footer
         placeholder: 'Ваше имя',
     },
     {
+      mods: ['subscribe'],
       placeholder: 'Ваш e-mail',
     }]
   })
     +button({
         mods: ['red'],
+        addClass: 'sub-button',
         text: ['Отправить заявку']
       })
   footer.footer
@@ -186,7 +188,7 @@ block footer
 block footer
   footer.footer
     .container
-      .button-top
+      .button-top(style="display: none;")
       .footer-wrapper
         .footer-left
           +logo({

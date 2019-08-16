@@ -14,7 +14,7 @@
 }
 
 .banner-background {
-  top: 0;
+  top: -130px;
   position: absolute;
   height: 550px;
   width: 100%;
@@ -33,5 +33,11 @@
     width: 100%;
     height: 100px;
     background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%),
+  }
+}
+
+@media screen and (max-width: 992px){
+  .banner-background_no-opacity {
+    opacity: 0.2;
   }
 }

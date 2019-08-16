@@ -10,7 +10,7 @@ block body
     })
       +title({
       mods: ['banner'],
-      text: 'Управление гостиничным бизнесом'
+      text: '<p>IFK Hotel Management – управляющая компания <span class="text-red">для гостиниц</span></p>'
       })
       .desc За 10 лет мы накопили большой опыт в управлении бизнесом который поможет добиться успеха вашему бизнесу
       +button({
@@ -62,7 +62,8 @@ block body
   .container
     .hotels
       .hotels__item.active
-        .hotels__title ХУЙ 1
+        .background(style=('background-image: url(../img/banner_hotels.png)'))
+        .hotels__title ГК Корпоративного университета Сбербанка
         .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
         .hotels__stars
           +icon({
@@ -86,7 +87,8 @@ block body
           a(href='#').hotels__link Подбробнее
 
       .hotels__item
-        .hotels__title ХУЙ 2
+        .background(style=('background-image: url(../img/banner_hotels.png)'))
+        .hotels__title Блок 2
         .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
         .hotels__stars
           +icon({
@@ -110,7 +112,8 @@ block body
           a(href='#').hotels__link Подбробнее
 
       .hotels__item
-        .hotels__title ХУЙ 3
+        .background(style=('background-image: url(../img/banner_hotels.png)'))
+        .hotels__title Блок 3
         .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
         .hotels__stars
           +icon({
@@ -134,7 +137,8 @@ block body
           a(href='#').hotels__link Подбробнее
 
       .hotels__item
-        .hotels__title ХУЙ 4
+        .background(style=('background-image: url(../img/banner_hotels.png)'))
+        .hotels__title Блок 4
         .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
         .hotels__stars
           +icon({
@@ -158,8 +162,9 @@ block body
           a(href='#').hotels__link Подбробнее
 
       .hotels__item
-        .hotels__title ХУЙ 5
-        .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета   и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.Кампус спроектирован в контексте философии Корпоративного университета   и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.Кампус спроектирован в контексте философии Корпоративного университета   и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
+        .background(style=('background-image: url(../img/banner_hotels.png)'))
+        .hotels__title Блок 5
+        .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета
         .hotels__stars
           +icon({
             addClass: 'hotels__star',
@@ -180,3 +185,21 @@ block body
         .hotels__info
           .hotels__room 148 номеров
           a(href='#').hotels__link Подбробнее
+
+  +subscribe({
+      background: '../img/subscribe.png',
+      items: [{
+        mods: ['wrapper', 'slider']
+      }]
+    })
+      +title({
+      mods: ['subscribe'],
+      text: 'Нас рекомендуют',
+      addClass: 'text-white'
+      })
+      +button({
+          mods: ['red'],
+          addClass: 'sub-button',
+          text: ['Отправить заявку']
+        })
+      //- +slick

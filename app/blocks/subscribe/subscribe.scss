@@ -3,10 +3,15 @@
   background-color: #000;
   background-position: right;
   min-height: 186px;
+  background-size: cover;
 }
 
 .subscribe_wrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+
+.input-form_subscribe {
+  margin-bottom: 20px;
 }

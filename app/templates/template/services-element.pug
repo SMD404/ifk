@@ -6,7 +6,7 @@ html(lang="ru")
     link(rel="stylesheet", href="../css/style.css")
     title ifk-hm
   body.default-font
-
+  
 block includes
   include ../../blocks/logo/logo
   include ../../blocks/button/button
@@ -17,9 +17,10 @@ block includes
   include ../../blocks/subscribe/subscribe
   include ../../blocks/input/input
   include ../../blocks/container/container
-  include ../../blocks/icon/icon
   include ../../blocks/callback/callback
+  include ../../blocks/icon/icon
 
+block header
 block header
   header.header
     .header__inner
@@ -96,18 +97,105 @@ block header
           })
 block body
   main
-        
 
+block footer
+  +subscribe({
+    background: '../img/subscribe.png',
+    items: [{
+      mods: ['wrapper']
+    }]
+  })
+    +title({
+    mods: ['subscribe'],
+    text: 'Управление гостиничным бизнесом',
+    addClass: 'text-white'
+    })
+    +input({
+      items: [{
+        mods: ['subscribe'],
+        placeholder: 'Ваше имя',
+    },
+    {
+      mods: ['subscribe'],
+      placeholder: 'Ваш e-mail',
+    }]
+  })
+    +button({
+        mods: ['red'],
+        addClass: 'sub-button',
+        text: ['Отправить заявку']
+      })
+  footer.footer
+    .footer__hidden
+      .overlay(close-button)
+      //- +callback({
+      //-   title: 'Оставить заявку ',
+      //-   policy: 'Нажимая на кнопку “Отправить” вы соглашаетесь на обработку персональных данных',
+      //-   wraps: [{
+      //-     mods: ['small'],
+      //-     inputs: [{
+      //-       placeholder: 'Ваше имя',
+      //-       tag: 'input',
+      //-       type: 'text'
+      //-     },{
+      //-       placeholder: 'Ваш e-mail',
+      //-       tag: 'input',
+      //-       type: 'email'
+      //-     },{
+      //-       placeholder: 'Ваш телефон',
+      //-       tag: 'input',
+      //-       type: 'tel'
+      //-     }]
+      //-   },{
+      //-     inputs: [{
+      //-       placeholder: '123',
+      //-       tag: 'select',
+      //-       selects: [{
+      //-         text: 'Номер 1',
+      //-       },{
+      //-         text: 'Номер 1',
+      //-       },{
+      //-         text: 'Номер 1',
+      //-       },{
+      //-         text: 'Номер 1',
+      //-       }]         
+      //-     },{
+      //-       mods: ['big'],
+      //-       placeholder: 'Опишите ваши пожелания',
+      //-       tag: 'textarea'
+      //-     }]
+      //-   }]
+      //- })
 
+      +callback({
+        title: 'Заказать звонок',
+        policy: 'Нажимая на кнопку “Отправить” вы соглашаетесь на обработку персональных данных',
+        wraps: [{
+          mods: ['medium'],
+          inputs: [{
+            placeholder: 'Ваше имя',
+            tag: 'input',
+            type: 'text'
+          }]
+        },{
+          inputs: [{
+            placeholder: 'Ваш телефон',
+            tag: 'input',
+            type: 'tel'  
+          }]
+        }]
+      })
+    
 block footer
   footer.footer
     .container
-      .button-top(style="display: none;")
+      .button-top
       .footer-wrapper
         .footer-left
           +logo({
             link_image: '../img/logo.png'
             })
+
         .footer-center
           +nav({
               items: [{
@@ -153,13 +241,12 @@ block footer
               addClass: 'soc-link',
               icon: 'inst',
             })
-
       .footer-copyright-wrapper
        .footer-copyright
           .footer-copyright__item © IFK Hotel Management 2008-2018. All Rights Reserved.
           .footer-copyright-link
             a.link-copyright(href='#') Политика конфиденциальности
-            a.link-copyright(href='#') Обработка персональных данных  
+            a.link-copyright(href='#') Обработка персональных данных
   div(style='display: none;')
     include ../../../dist/img/icons/icons.svg
   script(src="../js/bundle.js")

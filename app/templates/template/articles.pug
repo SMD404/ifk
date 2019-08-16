@@ -18,8 +18,8 @@ block includes
   include ../../blocks/input/input
   include ../../blocks/container/container
   include ../../blocks/icon/icon
-block body
-  block header
+
+block header
   header.header
     .header__inner
       .header__left
@@ -90,6 +90,10 @@ block body
         text: 'Заказать звонок',
         })
         .header-swap-lang
+          +icon({
+            icon: 'globus'
+          })
+block body
   main
     .blog-banner
       .container
@@ -121,7 +125,7 @@ block body
                 text: 'Статья в одну строку',
                 mods: ['articles']
               })
-              .articles-text Обговариваете удобное для вас время и дни вывоза. В установленные сроки наши специалисты приезжают...
+              .articles-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis velit voluptate hic, recusandae perspiciatis a asperiores eaque. Nostrum, dolorem sed?
           a(href="#").articles__item
             .articles__image(style="background-image:url(../img/article.png)")
             .articles__content-wrapper
@@ -130,7 +134,7 @@ block body
                 text: 'Статья в одну строку',
                 mods: ['articles']
               })
-              .articles-text Обговариваете удобное для вас время и дни вывоза. В установленные сроки наши специалисты приезжают...
+              .articles-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis velit voluptate hic, recusandae perspiciatis a asperiores eaque. Nostrum, dolorem sed?
           a(href="#").articles__item
             .articles__image(style="background-image:url(../img/article.png)")
             .articles__content-wrapper
@@ -139,7 +143,7 @@ block body
                 text: 'Статья в одну строку',
                 mods: ['articles']
               })
-              .articles-text Обговариваете удобное для вас время и дни вывоза. В установленные сроки наши специалисты приезжают...
+              .articles-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis velit voluptate hic, recusandae perspiciatis a asperiores eaque. Nostrum, dolorem sed?
           a(href="#").articles__item
             .articles__image(style="background-image:url(../img/article.png)")
             .articles__content-wrapper
@@ -148,7 +152,7 @@ block body
                 text: 'Статья в одну строку',
                 mods: ['articles']
               })
-              .articles-text Обговариваете удобное для вас время и дни вывоза. В установленные сроки наши специалисты приезжают...
+              .articles-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis velit voluptate hic, recusandae perspiciatis a asperiores eaque. Nostrum, dolorem sed?
           a(href="#").articles__item
             .articles__image(style="background-image:url(../img/article.png)")
             .articles__content-wrapper
@@ -157,7 +161,7 @@ block body
                 text: 'Статья которая длинее чем в одну строку',
                 mods: ['articles']
               })
-              .articles-text Обговариваете удобное для вас время и дни вывоза. В установленные сроки наши специалисты приезжают...
+              .articles-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis velit voluptate hic, recusandae perspiciatis a asperiores eaque. Nostrum, dolorem sed?
     +subscribe({
         background: '../img/subscribe.png',
         items: [{
@@ -185,7 +189,7 @@ block body
 block footer
   footer.footer
     .container
-      .button-top
+      .button-top(style="display: none;")
       .footer-wrapper
         .footer-left
           +logo({
