@@ -1,8 +1,11 @@
 var $ = require('jquery');
+require('slick-carousel');
 
 function thanks(){
   $('.callback__thx').addClass('open')
 }
+
+// thanks()
 
 function close(){
   $('.footer__hidden').children().fadeOut();
@@ -63,4 +66,12 @@ $(document).ready(function(){
   if($(window).width() < 768) {
     $('.hotels__item').addClass('active')
   }
+});
+
+
+var hamburger = $('.humburger');
+hamburger.click(function () {
+  hamburger.toggleClass('active');
+  $('.menu').toggleClass('active');
+  return false;
 });

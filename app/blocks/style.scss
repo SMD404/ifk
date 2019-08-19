@@ -16,6 +16,7 @@
 @import './input/input';
 @import './subscribe/subscribe';
 @import './container/container';
+@import './mission/mission';
 
 .banner-content {
   max-width: 468px;
@@ -23,6 +24,23 @@
 
 main {
   padding-top: 106px;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  & ul li {
+    position: relative;
+    list-style-type: none;
+  
+    &:before {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 3px;
+      background-color: $red;
+      left: -35px;
+      top: 10px;
+    }
+  }
 }
 
 
@@ -36,7 +54,7 @@ main {
   &__inner {
     max-width: 1140px;
     width: 100%;
-    height: 106px;
+    min-height: 106px;
     margin: 0 auto;
     padding: 0 15px;
     box-sizing: border-box;
@@ -50,9 +68,11 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    ;
     flex: 1 1 auto;
     padding: 0 15px;
+    @media screen and (max-width: 992px){
+      justify-content: flex-start;
+    }
   }
 
   &-right {
@@ -96,6 +116,10 @@ main {
   color: $white;
 }
 
+.text-black {
+  color: $black;
+}
+
 
 
 .we-doing {
@@ -113,7 +137,7 @@ main {
     flex: 1 1 48%;
     margin: 10px;
     box-sizing: border-box;
-    
+
 
     &.item_gray {
       padding: 40px 15px 40px 100px;
@@ -226,6 +250,33 @@ main {
   }
 }
 
+.callback-form {
+  position: relative;
+  background: #F1F1F1;
+  & .callback__close {
+    display: none;
+  }
+  & .callback {
+    background: #F1F1F1;
+  }
+  & .callback__thx {
+    background: #F1F1F1;
+  }
+  & .callback__submit{
+    flex: 1 1 23%;
+    width: auto;
+  }
+  & .callback {
+    max-width: 100%;
+  }
+  & .callback__input-wrap {
+    flex: 1 1 40%;
+  }
+  & .callback__input-wrap_small {
+    flex: 1 1 270px;
+  }
+}
+
 .overlay {
   position: fixed;
   width: 100%;
@@ -258,11 +309,13 @@ main {
     transition: $transition;
     border-radius: 10px;
     overflow: hidden;
+    min-width: 257px;
 
     &:hover {
       background: #F1F1F1;
       transition: $transition;
     }
+
     & .articles-text {
       max-height: 115px;
       overflow: hidden;
@@ -418,21 +471,6 @@ main {
   font-size: 18px;
   color: #464646;
 
-  & ul li {
-    position: relative;
-    list-style-type: none;
-
-    &:before {
-      content: '';
-      position: absolute;
-      width: 10px;
-      height: 3px;
-      background-color: $red;
-      left: -20px;
-      top: 10px;
-    }
-  }
-
   & h2 {
     font-size: 20px;
     line-height: 29px;
@@ -561,8 +599,6 @@ main {
         margin-top: 38px;
       }
 
-      .hotels__room {}
-
       .hotels__link {
         color: #000;
       }
@@ -610,6 +646,132 @@ main {
   overflow: hidden;
 }
 
+.history {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &-block-bottom {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__item {
+      max-width: 222px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+
+      &:nth-of-type(2):before {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: $red;
+        border-radius: 50px;
+        top: -23px;
+
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
+
+      & svg {
+        width: 99px;
+        height: 99px;
+      }
+    }
+  }
+
+  &-block-top {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 100px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      margin: 0;
+      align-items: center;
+    }
+
+    &__item {
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: $red;
+        border-radius: 50px;
+        bottom: -23px;
+
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
+
+      & svg {
+        width: 87px;
+        height: 87px;
+      }
+    }
+  }
+
+  &-block-center {
+    margin: 15px 105px;
+    background: $red;
+    height: 2px;
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: $red;
+      border-radius: 50px;
+      top: -7px;
+      left: -10px;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: $red;
+      border-radius: 50px;
+      top: -7px;
+      right: -10px;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+}
+
+
 @media screen and (max-width: 768px) {
   .hotels {
     max-height: 100%;
@@ -625,11 +787,66 @@ main {
       }
     }
   }
+
+
 }
 
-@media screen and (max-width: 650px){
+@media screen and (max-width: 650px) {
   .hotels__item {
-      height: auto;
-      max-width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
 }
+
+
+.values {
+  position: relative;
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 -10px;
+  }
+  &__item {
+    border: 1px solid #E4E4E4;
+    box-sizing: border-box;
+    min-width: 300px;
+    flex: 1 1 23%;
+    padding: 25px 20px;
+    border-radius: 20px;
+    margin: 10px 10px;
+    & ul li {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.team {
+  position: relative;
+  &-item{
+    position: relative;
+    padding: 30px 0;
+  &:nth-child(even){
+    background: #F8F8F8;
+  }
+  &__container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+   }
+  &__right {
+    max-width: 688px;
+    margin-left: 140px;
+  }
+  &__left {
+    width: 257px;
+    height: 239px;
+    & img {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+    }
+  }
+  }
 }

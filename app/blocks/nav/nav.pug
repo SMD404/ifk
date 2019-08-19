@@ -1,4 +1,8 @@
-mixin nav(data) 
+mixin nav(data)
+  .humburger
+    span.line.line-1
+    span.line.line-2
+    span.line.line-3
   nav.main-menu
     each item in data.items
       .main-menu__item(class=addClass('menu-item', item.mods, item.addClass))
@@ -10,12 +14,6 @@ mixin nav(data)
               .submenu__item
                 a(href=sub.link)
                   != sub.text
-
-
-
-
-
-
 
 
 

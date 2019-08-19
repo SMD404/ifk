@@ -1,0 +1,8 @@
+mixin mission(data)
+  .mission
+    .container
+      +title({
+        text: data.title
+      })
+      .text(class=addClass('text', data.mods, data.addClass))!=data.text
+        

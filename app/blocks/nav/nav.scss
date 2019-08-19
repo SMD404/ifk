@@ -4,26 +4,55 @@
   height: 100%;
   width: 100%;
   justify-content: space-around;
-    &__item {
-      margin: auto 10px;
+  align-items: center;
+
+  @media screen and (max-width: 992px) {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    height: auto;
+    transform: translateY(100%);
+    align-items: flex-start;
+    max-width: 400px;
+  }
+
+  &__item {
+    margin: auto 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2D2D2D;
+    font-weight: bold;
+
+    @media screen and (max-width:992px) {
+      padding: 5px 20px;
+      font-size: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    & a {
+      text-decoration: none;
       height: 100%;
       display: flex;
       align-items: center;
-      position: relative;
-      font-size: 16px;
-      line-height: 24px;
-      color: #2D2D2D;
-      font-weight: bold;
-        & a {
-          text-decoration: none;
-          height: 100%;
-          display:flex;
-          align-items: center;
-        }
-      &:hover{
-        color: $red;
-      }
-      &:hover .submenu {
+
+    }
+
+    &:hover {
+      color: $red;
+    }
+
+    &:hover .submenu {
       transform: scaleY(1);
       transition: $transition;
     }
@@ -44,17 +73,84 @@
   z-index: 10;
   padding: 0 20px;
   width: 257px;
-    &__item {
-      text-decoration: none;
-      padding: 14px 0;
-      &:hover a {
-        color: $red;
-      }
+
+  @media screen and (max-width: 922px) {
+    box-shadow: none;
+    position: relative;
+    transform: scaleY(1);
+    top: 0;
+    width: 100%;
+    background: inherit;
+  }
+
+  &__item {
+    text-decoration: none;
+    padding: 14px 0;
+    @media screen and (max-width: 992px){
+      padding: 5px 0;
     }
+
+    &:hover a {
+      color: $red;
+    }
+  }
 }
 
-@media screen and (max-width: 992px){
-  .main-menu {
-    display: none;
+.humburger {
+  display: none;
+  width: 50px;
+  height: 20px;
+  position: relative;
+
+  @media screen and (max-width: 992px) {
+    display: block;
+  }
+
+  & .line {
+    display: block;
+    background: $black;
+    width: 30px;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    border-radius: 4px;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+  }
+
+  & .line.line-1 {
+    top: 0;
+  }
+
+  & .line.line-2 {
+    top: 50%;
+  }
+
+  & .line.line-3 {
+    top: 100%;
+  }
+
+  &:hover .line-1,
+  &:focus .line-1 {
+    transform: translateY(-4px);
+  }
+
+  &:hover .line-3,
+  &:focus .line-3 {
+    transform: translateY(4px);
+  }
+
+  &.active .line-1 {
+    transform: translateY(5px) translateX(0) rotate(45deg);
+  }
+
+  &.active .line-2 {
+    opacity: 0;
+  }
+
+  &.active .line-3 {
+    transform: translateY(-15px) translateX(0) rotate(-45deg);
   }
 }
