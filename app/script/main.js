@@ -1,5 +1,6 @@
 var $ = require('jquery');
 require('slick-carousel');
+require('fancybox');
 
 function thanks(){
   $('.callback__thx').addClass('open')
@@ -75,3 +76,136 @@ hamburger.click(function () {
   $('.menu').toggleClass('active');
   return false;
 });
+
+$('.gallery').slick({
+  dots: true,
+  speed: 300,
+  infinite: true,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  centerMode: true,
+  centerPadding: '150px',
+  rows: 0,
+  prevArrow: '.prev-gallery',
+  nextArrow: '.next-gallery',
+  responsive: [
+    {
+      breakpoint: 1250,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+        centerMode: true,
+        centerPadding: '70px',
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: '150px',
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: '50px',
+      }
+    },
+    {
+      breakpoint: 420,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: '10px',
+      }
+    }
+  ]
+})
+
+$('.slider-portfolio').slick({
+  dots: true,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  centerMode: true,
+  centerPadding: '40px',
+  rows: 0,
+  prevArrow: '.prev-portfolio',
+  nextArrow: '.next-portfolio',
+  responsive: [
+    {
+      breakpoint: 1190,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+        centerMode: true,
+        centerPadding: '20px',
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: '50px',
+      }
+    },
+    {
+      breakpoint: 420,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: '0',
+      }
+    }
+  ]
+})
+
+$('.slick-subscribe').slick({
+  dots: true,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  infinite: true,
+  rows: 0,
+  prevArrow: '.prev-subscribe',
+  nextArrow: '.next-subscribe',
+  responsive: [{
+      breakpoint: 1190,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    }
+  ]
+})
+
+

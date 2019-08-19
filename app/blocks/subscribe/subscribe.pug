@@ -1,6 +1,9 @@
 mixin subscribe(subData)
   each item in subData.items
     section.subscribe(class=addClass('subscribe', item.mods, item.addClass), style='background-image:url(' + (subData.background) + ')')
+      .callback__thx
+        .callback__thx-title Спасибо
+        .callback__thx-desc Текст описания
       .container
           if block
             block

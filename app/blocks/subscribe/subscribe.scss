@@ -2,14 +2,16 @@
   background-repeat: no-repeat;
   background-color: #000;
   background-position: right;
-  min-height: 186px;
+  min-height: 262px;
   background-size: cover;
+  position: relative;
 }
 
 .subscribe_wrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  position: relative;
 }
 
 .input-form_subscribe {

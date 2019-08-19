@@ -64,7 +64,7 @@
   transform-origin: 0 0;
   overflow: hidden;
   position: absolute;
-  top: 100px;
+  top: 63px;
   transition: $transition;
   background: $white;
   color: $black;
@@ -73,6 +73,9 @@
   z-index: 10;
   padding: 0 20px;
   width: 257px;
+  @media screen and (max-width: 992px) {
+    top: 100px;
+  }
 
   @media screen and (max-width: 922px) {
     box-shadow: none;

@@ -192,14 +192,166 @@ block body
         mods: ['wrapper', 'slider']
       }]
     })
-      +title({
-      mods: ['subscribe'],
-      text: 'Нас рекомендуют',
-      addClass: 'text-white'
-      })
-      +button({
-          mods: ['red'],
-          addClass: 'sub-button',
-          text: ['Отправить заявку']
-        })
-      //- +slick
+      .flex-warpper
+        .subscribe-left
+          +title({
+          mods: ['subscribe'],
+          text: 'Нас рекомендуют',
+          addClass: 'text-white'
+          })
+          +button({
+              mods: ['red'],
+              addClass: 'sub-button',
+              text: ['Все отзывы']
+            })
+        .subscribe-right
+          .slick-subscribe
+            a.slick-subscribe-item(data-fancybox="gallery-subscribe" style="background-image:url(../img/reviews.png)" href="../img/reviews.png")
+            a.slick-subscribe-item(data-fancybox="gallery-subscribe" style="background-image:url(../img/reviews.png)" href="../img/reviews.png")
+            a.slick-subscribe-item(data-fancybox="gallery-subscribe" style="background-image:url(../img/reviews.png)" href="../img/reviews.png")
+            a.slick-subscribe-item(data-fancybox="gallery-subscribe" style="background-image:url(../img/reviews.png)" href="../img/reviews.png")
+
+  .container
+    .slider-portfolio
+      .hotels__item-slider.active
+        .background(style=('background-image: url(../img/banner_hotels.png)'))
+        .hotels__title ГК Корпоративного университета Сбербанка
+        .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
+        .hotels__stars
+          +icon({
+            addClass: 'hotels__star',
+            icon: 'star'
+          })
+          +icon({
+            addClass: 'hotels__star',
+            icon: 'star'
+          })
+          +icon({
+            addClass: 'hotels__star',
+            icon: 'star'
+          })
+          +icon({
+            addClass: 'hotels__star',
+            icon: 'star'
+          })
+        .hotels__info
+          .hotels__room 148 номеров
+          a(href='#').hotels__link Подбробнее
+      .hotels__item-slider.active
+        .background(style=('background-image: url(../img/banner_hotels.png)'))
+        .hotels__title ГК Корпоративного университета Сбербанка
+        .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
+        .hotels__stars
+          +icon({
+            addClass: 'hotels__star',
+            icon: 'star'
+          })
+          +icon({
+            addClass: 'hotels__star',
+            icon: 'star'
+          })
+          +icon({
+            addClass: 'hotels__star',
+            icon: 'star'
+          })
+          +icon({
+            addClass: 'hotels__star',
+            icon: 'star'
+          })
+        .hotels__info
+          .hotels__room 148 номеров
+          a(href='#').hotels__link Подбробнее
+      .hotels__item-slider.active
+        .background(style=('background-image: url(../img/banner_hotels.png)'))
+        .hotels__title ГК Корпоративного университета Сбербанка
+        .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
+        .hotels__stars
+          +icon({
+            addClass: 'hotels__star',
+            icon: 'star'
+          })
+          +icon({
+            addClass: 'hotels__star',
+            icon: 'star'
+          })
+          +icon({
+            addClass: 'hotels__star',
+            icon: 'star'
+          })
+          +icon({
+            addClass: 'hotels__star',
+            icon: 'star'
+          })
+        .hotels__info
+          .hotels__room 148 номеров
+          a(href='#').hotels__link Подбробнее
+      .hotels__item-slider.active
+        .background(style=('background-image: url(../img/banner_hotels.png)'))
+        .hotels__title ГК Корпоративного университета Сбербанка
+        .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
+        .hotels__stars
+          +icon({
+            addClass: 'hotels__star',
+            icon: 'star'
+          })
+          +icon({
+            addClass: 'hotels__star',
+            icon: 'star'
+          })
+          +icon({
+            addClass: 'hotels__star',
+            icon: 'star'
+          })
+          +icon({
+            addClass: 'hotels__star',
+            icon: 'star'
+          })
+        .hotels__info
+          .hotels__room 148 номеров
+          a(href='#').hotels__link Подбробнее
+    .button-portfolio
+      button(type="button" class="prev-portfolio") Назад
+      button(type="button" class="next-portfolio") Вперед
+  .gallery-wrapper
+    .gallery
+      a.gallery__item(data-fancybox="gallery" style="background:url(../img/gallery.png)" href="../img/gallery.png")
+      a.gallery__item(data-fancybox="gallery" style="background:url(../img/gallery.png)" href="../img/gallery.png")
+      a.gallery__item(data-fancybox="gallery" style="background:url(../img/gallery.png)" href="../img/gallery.png")
+      a.gallery__item(data-fancybox="gallery" style="background:url(../img/gallery.png)" href="../img/gallery.png")
+    .button-gallery
+      button(type="button" class="prev-gallery")
+      button(type="button" class="next-gallery")
+
+  .container
+    +title({
+      text: 'Инструменты IFK Hotel Management'
+    })
+    .tools
+      a.tools__item(href="#")
+        img(src="../img/hotel.png")
+        .text Система онлайн-отчетности IFK Reports для ведения финансов. Владелец отеля получает постоянный доступ к системе.
+      a.tools__item(href="#")
+        img(src="../img/hotel.png")
+        .text Система онлайн-отчетности IFK Reports для ведения финансов. Владелец отеля получает постоянный доступ к системе.
+      a.tools__item(href="#")
+        img(src="../img/hotel.png")
+        .text Система онлайн-отчетности IFK Reports для ведения финансов. Владелец отеля получает постоянный доступ к системе.
+      a.tools__item(href="#")
+        img(src="../img/hotel.png")
+        .text Система онлайн-отчетности IFK Reports для ведения финансов. Владелец отеля получает постоянный доступ к системе.
+      a.tools__item(href="#")
+        img(src="../img/hotel.png")
+        .text Система онлайн-отчетности IFK Reports для ведения финансов. Владелец отеля получает постоянный доступ к системе.
+      a.tools__item(href="#")
+        img(src="../img/hotel.png")
+        .text Система онлайн-отчетности IFK Reports для ведения финансов. Владелец отеля получает постоянный доступ к системе.
+      a.tools__item(href="#")
+        img(src="../img/hotel.png")
+        .text Система онлайн-отчетности IFK Reports для ведения финансов. Владелец отеля получает постоянный доступ к системе.
+      a.tools__item(href="#")
+        img(src="../img/hotel.png")
+        .text Система онлайн-отчетности IFK Reports для ведения финансов. Владелец отеля получает постоянный доступ к системе.
+      a.tools__item(href="#")
+        img(src="../img/hotel.png")
+        .text Система онлайн-отчетности IFK Reports для ведения финансов. Владелец отеля получает постоянный доступ к системе.
+        
