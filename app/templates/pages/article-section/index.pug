@@ -7,7 +7,7 @@ block body
         +breadcrumbs
         +title({
                   text: 'Название статьи',
-                  addClass: 'title__blog',
+                  addClass: 'title_center',
                 })
         .article-data 13.06.2019
     .container
@@ -27,10 +27,103 @@ block body
             p  «Кто ж так строит!»
           h2 Если вы изначально хотите построить гостиницу
           p Чтобы сдать ее в аренду, то это не избавляет вас от тех шагов, которые должен пройти любой инвестор в гостиничный проект. Анализ целесообразности, маркетинговые исследования, прогнозные инвестиционные бюджеты и расчет прибылей и убытков. Получив положительные прогнозы, необходимо сразу определиться с управляющей компанией и брендом. Заключив с гостиничным оператором договор технического сопровождения, вы обезопасите себя от серьезных ошибок и дополнительных инвестиций в необходимые улучшения или перестройку/переоснащение отеля. Нам часто предлагают рассмотреть уже построенный отель. И ознакомившись с проектом, нам остается только воскликнуть: «Кто ж так строит!»
-          .read-more Читайте также
+          a.read-more(href="#")
+            .read-more__img
+              img(src="../img/gallery.png")
+            .read-more__content
+              .title
+                span.title_redline Читайте также
+              .text
+                .read-more__title Название статьи если вы изначально хотите построить гостиницу
+                p Обговариваете удобное для вас время и дни вывоза. В установленные сроки наши специалисты приезжают...
           h2 Если вы изначально хотите построить гостиницу
           p Чтобы сдать ее в аренду, то это не избавляет вас от тех шагов, которые должен пройти любой инвестор в гостиничный проект. Анализ целесообразности, маркетинговые исследования, прогнозные инвестиционные бюджеты и расчет прибылей и убытков. Получив положительные прогнозы, необходимо сразу определиться с управляющей компанией и брендом. Заключив с гостиничным оператором договор технического сопровождения, вы обезопасите себя от серьезных ошибок и дополнительных инвестиций в необходимые улучшения или перестройку/переоснащение отеля. Нам часто предлагают рассмотреть уже построенный отель. И ознакомившись с проектом, нам остается только воскликнуть: «Кто ж так строит!»
-    .slider-read 
+    .slider-read
+      a(href="#").articles__item
+        .articles__image(style="background-image:url(../img/article.png)")
+        .articles__content-wrapper
+          .articles__data 13.06.2019
+          +title({
+            text: 'Статья в одну строку',
+            mods: ['articles']
+          })
+          .articles-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis velit voluptate hic, recusandae perspiciatis a asperiores eaque. Nostrum, dolorem sed?
+      a(href="#").articles__item
+        .articles__image(style="background-image:url(../img/article.png)")
+        .articles__content-wrapper
+          .articles__data 13.06.2019
+          +title({
+            text: 'Статья в одну строку',
+            mods: ['articles']
+          })
+          .articles-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis velit voluptate hic, recusandae perspiciatis a asperiores eaque. Nostrum, dolorem sed?
+      a(href="#").articles__item
+        .articles__image(style="background-image:url(../img/article.png)")
+        .articles__content-wrapper
+          .articles__data 13.06.2019
+          +title({
+            text: 'Статья в одну строку',
+            mods: ['articles']
+          })
+          .articles-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis velit voluptate hic, recusandae perspiciatis a asperiores eaque. Nostrum, dolorem sed?
+      a(href="#").articles__item
+        .articles__image(style="background-image:url(../img/article.png)")
+        .articles__content-wrapper
+          .articles__data 13.06.2019
+          +title({
+            text: 'Статья в одну строку',
+            mods: ['articles']
+          })
+          .articles-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis velit voluptate hic, recusandae perspiciatis a asperiores eaque. Nostrum, dolorem sed?
+      a(href="#").articles__item
+        .articles__image(style="background-image:url(../img/article.png)")
+        .articles__content-wrapper
+          .articles__data 13.06.2019
+          +title({
+            text: 'Статья которая длинее чем в одну строку',
+            mods: ['articles']
+          })
+          .articles-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis velit voluptate hic, recusandae perspiciatis a asperiores eaque. Nostrum, dolorem sed?
+    .callback-form
+      .container
+        +callback({
+          title: 'Отправить заявку',
+          policy: 'Нажимая на кнопку “Отправить” вы соглашаетесь на обработку персональных данных',
+          wraps: [{
+            mods: ['small'],
+            inputs: [{
+              placeholder: 'Ваше имя',
+              tag: 'input',
+              type: 'text'
+            },{
+              placeholder: 'Ваш e-mail',
+              tag: 'input',
+              type: 'email'
+            },{
+              placeholder: 'Ваш телефон',
+              tag: 'input',
+              type: 'tel'
+            }]
+          },{
+            inputs: [{
+              placeholder: '123',
+              tag: 'select',
+              selects: [{
+                text: 'Номер 1',
+              },{
+                text: 'Номер 1',
+              },{
+                text: 'Номер 1',
+              },{
+                text: 'Номер 1',
+              }]         
+            },{
+              mods: ['big'],
+              placeholder: 'Опишите ваши пожелания',
+              tag: 'textarea'
+            }]
+          }]
+        })
     +subscribe({
         background: '../img/subscribe.png',
         items: [{

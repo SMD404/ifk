@@ -1,0 +1,193 @@
+extends ../../template/services
+
+block body
+  main
+    .container
+      +title({
+        text: 'Объекты, которые для нас интересны:'
+      })
+      .object
+        .object__item
+          img(src="../img/obj_people.png")
+          .text Расположены в городе с населением от 300 000 человек.
+        .object__item
+          img(src="../img/obj_people.png")
+          .text Фонд – от 100 номеров
+        .object__item
+          img(src="../img/obj_people.png")
+          .text Соответствуют международным стандартам гостиничного сервиса
+      .text 
+        p IFK Hotel Management реализовал более 20 гостиничных проектов в регионах с самой высокой конкуренцией – Москве, Санкт- Петербурге, Сочи и других. У нас есть опыт и инструменты для того, чтобы с нуля открыть и быстро наладить бизнес.
+        p Мы готовы рассмотреть гостиничные объекты для аренды и открыть в них отели.
+      .we-doing
+        .we-doing__item.item_black.flex-wrapper
+              .text Позвоните нам, и мы обсудим перспективы сотрудничества
+              +button({
+                mods: ['red'],
+                text: 'Отправить заявку'
+              })
+      .hotels
+        .hotels__item.active
+          .background(style=('background-image: url(../img/banner_hotels.png)'))
+          .hotels__title ГК Корпоративного университета Сбербанка
+          .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
+          .hotels__stars
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+          .hotels__info
+            .hotels__room 148 номеров
+            a(href='#').hotels__link Подбробнее
+
+        .hotels__item
+          .background(style=('background-image: url(../img/banner_hotels.png)'))
+          .hotels__title Блок 2
+          .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
+          .hotels__stars
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+          .hotels__info
+            .hotels__room 148 номеров
+            a(href='#').hotels__link Подбробнее
+
+        .hotels__item
+          .background(style=('background-image: url(../img/banner_hotels.png)'))
+          .hotels__title Блок 3
+          .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
+          .hotels__stars
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+          .hotels__info
+            .hotels__room 148 номеров
+            a(href='#').hotels__link Подбробнее
+
+        .hotels__item
+          .background(style=('background-image: url(../img/banner_hotels.png)'))
+          .hotels__title Блок 4
+          .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
+          .hotels__stars
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+          .hotels__info
+            .hotels__room 148 номеров
+            a(href='#').hotels__link Подбробнее
+
+        .hotels__item
+          .background(style=('background-image: url(../img/banner_hotels.png)'))
+          .hotels__title Блок 5
+          .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета
+          .hotels__stars
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+          .hotels__info
+            .hotels__room 148 номеров
+            a(href='#').hotels__link Подбробнее
+  .callback-form
+    .container
+      +callback({
+        title: 'Отправить заявку',
+        policy: 'Нажимая на кнопку “Отправить” вы соглашаетесь на обработку персональных данных',
+        wraps: [{
+          mods: ['small'],
+          inputs: [{
+            placeholder: 'Ваше имя',
+            tag: 'input',
+            type: 'text'
+          },{
+            placeholder: 'Ваш e-mail',
+            tag: 'input',
+            type: 'email'
+          },{
+            placeholder: 'Ваш телефон',
+            tag: 'input',
+            type: 'tel'
+          }]
+        },{
+          inputs: [{
+            placeholder: '123',
+            tag: 'select',
+            selects: [{
+              text: 'Номер 1',
+            },{
+              text: 'Номер 1',
+            },{
+              text: 'Номер 1',
+            },{
+              text: 'Номер 1',
+            }]         
+          },{
+            mods: ['big'],
+            placeholder: 'Опишите ваши пожелания',
+            tag: 'textarea'
+          }]
+        }]
+      })

@@ -1,57 +1,140 @@
 extends ../../template/services
 
 block body
- .container
-    .we-doing
-      .we-doing-items
-        .we-doing__item.item_gray
-          a(href="#") 
-            .we-doing__number
-            +title({
-              mods: ['item'],
-              text: 'Контроль проектов'
+  main
+    .container-banner
+      .container
+        +breadcrumbs
+        +title({
+              text: 'Услуги',
+              mods: ['center']
             })
-            span.red-line
-            .text Возьмём вашу гостиницу в управление на любой стадии её существования: действующую, строящуюся, проектируемую или даже только планируемую.
-        .we-doing__item.item_gray
-          a(href="#")
-            .we-doing__number
-            +title({
-              mods: ['item'],
-              text: 'Контроль проектов'
-            })
-            span.red-line
-            .text Возьмём вашу гостиницу в управление на любой стадии её существования: действующую, строящуюся, проектируемую или даже только планируемую.
-        .we-doing__item.item_gray
-          a(href="#")
-            .we-doing__number
-            +title({
-              mods: ['item'],
-              text: 'Контроль проектов'
-            })
-            span.red-line
-            .text Возьмём вашу гостиницу в управление на любой стадии её существования: действующую, строящуюся, проектируемую или даже только планируемую.
-        .we-doing__item.item_black
-          .text Возьмём вашу гостиницу в управление на любой стадии её существования: действующую, строящуюся, проектируемую или даже только планируемую.
-          +button({
-            mods: ['red','m-top'],
-            text: 'Отправить заявку'
+    .container
+      .services
+        a.services__item(href="#")
+          img(src="../img/maze.png")
+          +title({
+            mods: ['item'],
+            text: 'Управление гостиничным бизнесом'
           })
-        .we-doing__item.item_gray
-          a(href="#")
-            .we-doing__number
-            +title({
-              mods: ['item'],
-              text: 'Контроль проектов'
-            })
-            span.red-line
-            .text Возьмём вашу гостиницу в управление на любой стадии её существования: действующую, строящуюся, проектируемую или даже только планируемую.
-        .we-doing__item.item_gray
-          a(href="#")
-            .we-doing__number
-            +title({
-              mods: ['item'],
-              text: 'Контроль проектов'
-            })
-            span.red-line
-            .text Возьмём вашу гостиницу в управление на любой стадии её существования: действующую, строящуюся, проектируемую или даже только планируемую.
+          span.red-line
+          .text_small IFK Hotel Management более 10 лет работает в гостиничном бизнесе России. Опыт в данной сфере вообще – ХХХ лет.
+        a.services__item(href="#")
+          img(src="../img/maze.png")
+          +title({
+            mods: ['item'],
+            text: 'Техническое сопровождение'
+          })
+          span.red-line
+          .text_small IFK Hotel Management более 10 лет работает в гостиничном бизнесе России. Опыт в данной сфере вообще – ХХХ лет.
+        a.services__item(href="#")
+          img(src="../img/maze.png")
+          +title({
+            mods: ['item'],
+            text: 'Гостиничный фрайчайзинг'
+          })
+          span.red-line
+          .text_small IFK Hotel Management более 10 лет работает в гостиничном бизнесе России. Опыт в данной сфере вообще – ХХХ лет.
+        a.services__item(href="#")
+          img(src="../img/maze.png")
+          +title({
+            mods: ['item'],
+            text: 'Предпроектное консультирование'
+          })
+          span.red-line
+          .text_small IFK Hotel Management более 10 лет работает в гостиничном бизнесе России. Опыт в данной сфере вообще – ХХХ лет.
+    //- .container
+    //-   .text.text-grey Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+    //-   .we-doing
+    //-     .we-doing-items
+    //-       .we-doing__item.item_gray
+    //-         a(href="#") 
+    //-           .we-doing__number
+    //-           +title({
+    //-             mods: ['item'],
+    //-             text: 'Контроль проектов'
+    //-           })
+    //-           span.red-line
+    //-           .text Возьмём вашу гостиницу в управление на любой стадии её существования: действующую, строящуюся, проектируемую или даже только планируемую.
+    //-       .we-doing__item.item_gray
+    //-         a(href="#")
+    //-           .we-doing__number
+    //-           +title({
+    //-             mods: ['item'],
+    //-             text: 'Контроль проектов'
+    //-           })
+    //-           span.red-line
+    //-           .text Возьмём вашу гостиницу в управление на любой стадии её существования: действующую, строящуюся, проектируемую или даже только планируемую.
+    //-       .we-doing__item.item_gray
+    //-         a(href="#")
+    //-           .we-doing__number
+    //-           +title({
+    //-             mods: ['item'],
+    //-             text: 'Контроль проектов'
+    //-           })
+    //-           span.red-line
+    //-           .text Возьмём вашу гостиницу в управление на любой стадии её существования: действующую, строящуюся, проектируемую или даже только планируемую.
+    //-       .we-doing__item.item_black
+    //-         .text Возьмём вашу гостиницу в управление на любой стадии её существования: действующую, строящуюся, проектируемую или даже только планируемую.
+    //-         +button({
+    //-           mods: ['red','m-top'],
+    //-           text: 'Отправить заявку'
+    //-         })
+    //-       .we-doing__item.item_gray
+    //-         a(href="#")
+    //-           .we-doing__number
+    //-           +title({
+    //-             mods: ['item'],
+    //-             text: 'Контроль проектов'
+    //-           })
+    //-           span.red-line
+    //-           .text Возьмём вашу гостиницу в управление на любой стадии её существования: действующую, строящуюся, проектируемую или даже только планируемую.
+    //-       .we-doing__item.item_gray
+    //-         a(href="#")
+    //-           .we-doing__number
+    //-           +title({
+    //-             mods: ['item'],
+    //-             text: 'Контроль проектов'
+    //-           })
+    //-           span.red-line
+    //-           .text Возьмём вашу гостиницу в управление на любой стадии её существования: действующую, строящуюся, проектируемую или даже только планируемую.
+  .callback-form
+    .container
+      +callback({
+        title: 'Отправить заявку',
+        policy: 'Нажимая на кнопку “Отправить” вы соглашаетесь на обработку персональных данных',
+        wraps: [{
+          mods: ['small'],
+          inputs: [{
+            placeholder: 'Ваше имя',
+            tag: 'input',
+            type: 'text'
+          },{
+            placeholder: 'Ваш e-mail',
+            tag: 'input',
+            type: 'email'
+          },{
+            placeholder: 'Ваш телефон',
+            tag: 'input',
+            type: 'tel'
+          }]
+        },{
+          inputs: [{
+            placeholder: '123',
+            tag: 'select',
+            selects: [{
+              text: 'Номер 1',
+            },{
+              text: 'Номер 1',
+            },{
+              text: 'Номер 1',
+            },{
+              text: 'Номер 1',
+            }]         
+          },{
+            mods: ['big'],
+            placeholder: 'Опишите ваши пожелания',
+            tag: 'textarea'
+          }]
+        }]
+      })

@@ -24,6 +24,9 @@
     }
     &_header {
       margin: 0 20px;
+      @media screen and (max-width: 768px){
+        margin: 10px 0;
+      }
     }
     &_red {
       background-color: $red;
