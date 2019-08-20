@@ -2,6 +2,19 @@ extends ../../template/company
 
 block body
   main
+    +banner({
+      link: '../img/banner.png',
+      items: [{
+        addClass: 'banner-services',
+        bannerClass: ''
+      }]
+    })
+      +breadcrumbs
+      +title({
+      mods: ['banner'],
+      text: 'IFK Hotel Management – ваш партнер в гостиничном бизнесе'
+      })
+      .desc Наша задача – выстроить комплексную работу вашей гостиницы, повысить ее прибыльность в условиях конкурентной среды.
     .container
       +title({
         text: 'История бренда'

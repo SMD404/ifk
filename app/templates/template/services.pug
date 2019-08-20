@@ -199,50 +199,37 @@ block footer
             })
 
         .footer-center
-          +nav({
-              items: [{
-                  text: 'Услуги',
-                  link: '#',
-              },
-              {
-                  text: 'Портфолио',
-                  link: '#',
-              },
-              {
-                  text: 'О компании',
-                  link: '#',
-              },
-              {
-                  text: 'Контакты',
-                  link: '#',
-              },
-              {
-                  text: 'Блог',
-                  link: '#',
-              }]
-            })
+          a.footer-center__item(href="#") Услуги
+          a.footer-center__item(href="#") Портфолио
+          a.footer-center__item(href="#") О компании
+          a.footer-center__item(href="#") Контакты
+          a.footer-center__item(href="#") Блог
         .footer-right
           .social
-            +icon({
-              link: '#',
-              addClass: 'soc-link',
-              icon: 'vk',
-            })
-            +icon({
-              link: '#',
-              addClass: 'soc-link',
-              icon: 'fb',
-            })
-            +icon({
-              link: '#',
-              addClass: 'soc-link',
-              icon: 'ok',
-            })
-            +icon({
-              link: '#',
-              addClass: 'soc-link',
-              icon: 'inst',
-            })
+            a(href="#")
+              +icon({
+                link: '#',
+                addClass: 'soc-link',
+                icon: 'vk',
+              })
+            a(href="#")
+              +icon({
+                link: '#',
+                addClass: 'soc-link',
+                icon: 'fb',
+              })
+            a(href="#")
+              +icon({
+                link: '#',
+                addClass: 'soc-link',
+                icon: 'ok',
+              })
+            a(href="#")
+              +icon({
+                link: '#',
+                addClass: 'soc-link',
+                icon: 'inst',
+              })
       .footer-copyright-wrapper
        .footer-copyright
           .footer-copyright__item © IFK Hotel Management 2008-2018. All Rights Reserved.

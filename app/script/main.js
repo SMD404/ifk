@@ -81,7 +81,7 @@ $('.gallery').slick({
   dots: true,
   speed: 300,
   infinite: true,
-  slidesToShow: 2,
+  slidesToShow: 3,
   slidesToScroll: 1,
   centerMode: true,
   centerPadding: '150px',
@@ -92,7 +92,7 @@ $('.gallery').slick({
     {
       breakpoint: 1250,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 1,
         infinite: true,
         dots: true,
@@ -101,9 +101,9 @@ $('.gallery').slick({
       }
     },
     {
-      breakpoint: 768,
+      breakpoint: 992,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1,
         centerMode: true,
         centerPadding: '150px',
@@ -124,7 +124,7 @@ $('.gallery').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         centerMode: true,
-        centerPadding: '10px',
+        centerPadding: '20px',
       }
     }
   ]
@@ -135,8 +135,7 @@ $('.slider-portfolio').slick({
   speed: 300,
   slidesToShow: 3,
   slidesToScroll: 1,
-  centerMode: true,
-  centerPadding: '40px',
+  centerMode: false,
   rows: 0,
   prevArrow: '.prev-portfolio',
   nextArrow: '.next-portfolio',
@@ -148,8 +147,6 @@ $('.slider-portfolio').slick({
         slidesToScroll: 1,
         infinite: true,
         dots: true,
-        centerMode: true,
-        centerPadding: '20px',
       }
     },
     {
@@ -157,8 +154,6 @@ $('.slider-portfolio').slick({
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        centerMode: true,
-        centerPadding: '50px',
       }
     },
     {
@@ -166,8 +161,6 @@ $('.slider-portfolio').slick({
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        centerMode: true,
-        centerPadding: '0',
       }
     }
   ]

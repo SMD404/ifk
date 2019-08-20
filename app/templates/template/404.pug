@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="../css/style.css")
+    link(rel="stylesheet", href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css")
+    link(rel="stylesheet", href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css")
+    link(rel="stylesheet", href="../css/jquery.fancybox.min.css")
+    title ifk-hm
+  body.default-font
+  
+block includes
+  include ../../blocks/logo/logo
+  include ../../blocks/button/button
+  include ../../blocks/nav/nav
+  include ../../blocks/banner/banner
+  include ../../blocks/breadcrumbs/breadcrumbs
+  include ../../blocks/title/title
+  include ../../blocks/subscribe/subscribe
+  include ../../blocks/input/input
+  include ../../blocks/container/container
+  include ../../blocks/icon/icon
+
+block body
+.error-wrap
+  .error-wrap__medium-block
+    img(src="../img/block.png", alt="")
+  .error-wrap__large-block
+    img(src="../img/block.png", alt="")
+  .container
+    .error-page
+      a.logo(href="#")
+        img(src="../img/logo.png", alt="")
+      .error-page__top
+        p Ошибка
+        img(src="../img/404.png")
+
+      .error-page__center
+        p Без паники! 
+        p Запрашиваемая вами страница недоступна, но это не страшно. 
+      .error-page__bottom
+        p Начните с 
+          a(href="#") главной

@@ -55,9 +55,13 @@
     &_medium {
       flex: 1 1 325px;
     }
+    &_big {
+      flex: 1 1 400px;
+    }
   }
   &__input {
     resize: none;
+    height: 100%;
     display: inline-block;
     border: 1px solid #CECECE;
     box-sizing: border-box;
@@ -69,6 +73,7 @@
     margin: 0 10px;
     margin-bottom: 20px;
     outline: none;
+    background: #fff;
     @media screen and (max-width: 560px) {
       padding: 5px 15px;
     }
@@ -102,6 +107,10 @@
   &__button {
     max-width: 240px;
     width: 100%;
+    order: -1;
+    @media screen and (max-width: 768px){
+      margin-bottom: 20px;
+    }
   }
   &__thx {
     text-align: center;
@@ -129,6 +138,10 @@
     }
     
   }
+}
+
+.button.button_no-display {
+  display: none;
 }
 
 .error {

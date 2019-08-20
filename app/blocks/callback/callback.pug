@@ -16,9 +16,9 @@ mixin callback(data)
             #{input.tag}.callback__input(class=addClass('callback__input',input.mods,input.addClass),type=input.type,placeholder=input.placeholder)
               if input.tag == 'select'
                 each select in input.selects
-                  option!= select.text
+                  option!=select.text
       .callback__submit
-        .callback__policy!= data.policy
+        .callback__policy!=data.policy
         +button({
           text: 'Отправить',
           mods: ['red'],

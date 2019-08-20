@@ -2,6 +2,23 @@ extends ../../template/services
 
 block body
   main
+    +banner({
+        link: '../img/banner-2.png',
+        items: [{
+          addClass: 'banner-services',
+          bannerClass: ''
+        }]
+      })
+        +breadcrumbs
+        +title({
+        mods: ['banner'],
+        text: 'Аренда здания под гостиницу'
+        })
+        .desc За 10 лет мы накопили большой опыт в управлении бизнесом который поможет добиться успеха вашему бизнесу
+        +button({
+          mods: ['red'],
+          text: ['Отправить заявку']
+        })
     .container
       +title({
         text: 'Объекты, которые для нас интересны:'
@@ -11,10 +28,10 @@ block body
           img(src="../img/obj_people.png")
           .text Расположены в городе с населением от 300 000 человек.
         .object__item
-          img(src="../img/obj_people.png")
+          img(src="../img/100.png")
           .text Фонд – от 100 номеров
         .object__item
-          img(src="../img/obj_people.png")
+          img(src="../img/obj_hotels.png")
           .text Соответствуют международным стандартам гостиничного сервиса
       .text 
         p IFK Hotel Management реализовал более 20 гостиничных проектов в регионах с самой высокой конкуренцией – Москве, Санкт- Петербурге, Сочи и других. У нас есть опыт и инструменты для того, чтобы с нуля открыть и быстро наладить бизнес.

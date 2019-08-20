@@ -2,6 +2,23 @@ extends ../../template/services
 
 block body
   main
+    +banner({
+        link: '../img/banner-4.png',
+        items: [{
+          addClass: 'banner-services',
+          bannerClass: ''
+        }]
+      })
+        +breadcrumbs
+        +title({
+        mods: ['banner'],
+        text: 'Франшиза для отеля или гостиницы'
+        })
+        .desc За 10 лет мы накопили большой опыт в управлении бизнесом который поможет добиться успеха вашему бизнесу
+        +button({
+          mods: ['red'],
+          text: ['Отправить заявку']
+        })
     .container
       .we-doing
         .we-doing-items

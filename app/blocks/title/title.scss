@@ -2,6 +2,7 @@
   font-weight: bold;
   font-size: 32px;
   line-height: 50px;
+  margin: 25px 0;
   color: $black;
   &_redline{
     border-bottom: 1px solid $red;
@@ -46,9 +47,6 @@
 .footer {
   position: relative;
   background-color: #F6F6F6;
-    &-right{
-
-    }
     &-center {
       display: flex;
       justify-content: center;
