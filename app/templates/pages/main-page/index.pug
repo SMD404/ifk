@@ -17,6 +17,8 @@ block body
         mods: ['red'],
         text: ['Отправить заявку']
       })
+      img(src="../img/small-block.png", alt="" class="block-left-main")
+      img(src="../img/small-block.png", alt="" class="block-right-main")
     .container
       .we-doing
         +title({
@@ -24,6 +26,7 @@ block body
           mods: ['page']
         })
         .we-doing-items
+          img(src="../img/medium-block.png", alt="" class="block-left")
           .we-doing__item.item_gray
             a(href="#") 
             .we-doing__number
@@ -92,6 +95,7 @@ block body
         mods: ['page']
       })
       .hotels
+        img(src="../img/medium-block.png", alt="" class="block-left")
         .hotels__item.active
           .background(style=('background-image: url(../img/banner_hotels.png)'))
           .hotels__title ГК Корпоративного университета Сбербанка

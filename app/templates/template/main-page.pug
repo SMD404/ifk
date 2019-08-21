@@ -101,6 +101,32 @@ block body
 
 
 block footer
+  +subscribe({
+    background: '../img/subscribe.png',
+    items: [{
+      mods: ['wrapper']
+    }]
+  })
+    +title({
+    mods: ['subscribe'],
+    text: 'Управление гостиничным бизнесом',
+    addClass: 'text-white'
+    })
+    +input({
+      items: [{
+        mods: ['subscribe'],
+        placeholder: 'Ваше имя',
+    },
+    {
+      mods: ['subscribe'],
+      placeholder: 'Ваш e-mail',
+    }]
+  })
+    +button({
+        mods: ['red'],
+        addClass: 'sub-button',
+        text: ['Отправить заявку']
+      })
   footer.footer
     .container
       .button-top(style="display: none;")

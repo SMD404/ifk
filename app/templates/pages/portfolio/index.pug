@@ -1,0 +1,264 @@
+extends ../../template/services
+
+block body
+  main
+  .container-banner
+    .container
+      +breadcrumbs
+      +title({
+            text: 'Портфолио',
+            mods: ['center', 'page']
+          })
+  section.segment
+    .container
+      .text.text-grey Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+  section.segment
+    .container
+      +title({
+        text: 'Наши проекты',
+        mods: ['page']
+      })
+      .slider-portfolio
+        .hotels__item-slider.active
+          .background(style=('background-image: url(../img/banner_hotels.png)'))
+          .hotels__title ГК Корпоративного университета Сбербанка
+          .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
+          .hotels__stars
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+          .hotels__info
+            .hotels__room 148 номеров
+            a(href='#').hotels__link Подбробнее
+        .hotels__item-slider.active
+          .background(style=('background-image: url(../img/banner_hotels.png)'))
+          .hotels__title ГК Корпоративного университета Сбербанка
+          .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
+          .hotels__stars
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+          .hotels__info
+            .hotels__room 148 номеров
+            a(href='#').hotels__link Подбробнее
+        .hotels__item-slider.active
+          .background(style=('background-image: url(../img/banner_hotels.png)'))
+          .hotels__title ГК Корпоративного университета Сбербанка
+          .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
+          .hotels__stars
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+          .hotels__info
+            .hotels__room 148 номеров
+            a(href='#').hotels__link Подбробнее
+        .hotels__item-slider.active
+          .background(style=('background-image: url(../img/banner_hotels.png)'))
+          .hotels__title ГК Корпоративного университета Сбербанка
+          .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
+          .hotels__stars
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+          .hotels__info
+            .hotels__room 148 номеров
+            a(href='#').hotels__link Подбробнее
+      .button-portfolio
+        button(type="button" class="prev-portfolio") Назад
+        button(type="button" class="next-portfolio") Вперед
+  section.segment
+    .container
+      +title({
+        text: 'Наши проекты',
+        mods: ['page']
+      })
+      .hotels
+        .hotels__item.active
+          .background(style=('background-image: url(../img/banner_hotels.png)'))
+          .hotels__title ГК Корпоративного университета Сбербанка
+          .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
+          .hotels__stars
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+          .hotels__info
+            .hotels__room 148 номеров
+            a(href='#').hotels__link Подбробнее
+
+        .hotels__item
+          .background(style=('background-image: url(../img/banner_hotels.png)'))
+          .hotels__title GOLDEN TULIP ROSA KHUTOR
+          .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
+          .hotels__stars
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+          .hotels__info
+            .hotels__room 148 номеров
+            a(href='#').hotels__link Подбробнее
+
+        .hotels__item
+          .background(style=('background-image: url(../img/banner_hotels.png)'))
+          .hotels__title GOLDEN TULIP ROSA KHUTOR
+          .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
+          .hotels__stars
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+          .hotels__info
+            .hotels__room 148 номеров
+            a(href='#').hotels__link Подбробнее
+
+        .hotels__item
+          .background(style=('background-image: url(../img/banner_hotels.png)'))
+          .hotels__title GOLDEN TULIP ROSA KHUTOR
+          .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
+          .hotels__stars
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+          .hotels__info
+            .hotels__room 148 номеров
+            a(href='#').hotels__link Подбробнее
+        .hotels__item
+          .background(style=('background-image: url(../img/banner_hotels.png)'))
+          .hotels__title GOLDEN TULIP ROSA KHUTOR
+          .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета
+          .hotels__stars
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+          .hotels__info
+            .hotels__room 148 номеров
+            a(href='#').hotels__link Подбробнее
+      +button({
+          text: 'Посмотреть все проекты',
+          mods: ['center']
+        })
+
+  section.segment
+    .container
+      +title({
+        text: 'О проектах',
+        mods: ['page']
+      })
+      .about-project
+        .about-project__item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+        .about-project__item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.

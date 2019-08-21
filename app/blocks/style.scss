@@ -20,9 +20,45 @@
 
 .banner-content {
   max-width: 468px;
+  position: relative;
 
   &.banner-services {
     max-width: 768px;
+  }
+
+  & .block-left {
+    position: absolute;
+    right: -300px;
+  }
+
+  & .block-left-main {
+    position: absolute;
+    right: -280px;
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+    bottom: -40px;
+
+  }
+
+  & .block-center {
+    position: absolute;
+    left: -150px;
+  }
+  & .block-center-main {
+    position: absolute;
+    left: -50px;
+  }
+
+  & .block-right {
+    position: absolute;
+    top: -60px;
+    right: -60%;
+  }
+  & .block-right-main {
+    position: absolute;
+    right: 40px;
+    transform: rotate(90deg)
   }
 }
 
@@ -212,6 +248,13 @@ main {
     justify-content: flex-start;
     flex-wrap: wrap;
     counter-reset: items;
+    position: relative;
+    & .block-left {
+      position:absolute;
+      left: -90px;
+      bottom: 40%;
+      z-index: 1;
+    }
   }
 
   &__item {
@@ -419,7 +462,6 @@ main {
   align-content: center;
   max-width: 704px;
   margin: 0 auto;
-  margin-top: 87px;
 
   & p {
     margin: 0;
@@ -480,7 +522,23 @@ main {
 }
 
 .error-wrap {
-  position: relative;
+  & .block-left {
+    position: absolute;
+    top: 0;
+    left: 60%;
+  }
+
+  & .block-center {
+    position: absolute;
+    top: 40%;
+    right: -70px;
+  }
+
+  & .block-right {
+    position: absolute;
+    top: 80%;
+    left: -60px;
+  }
 }
 
 .error-wrap__small-block img{
@@ -841,6 +899,12 @@ main {
   flex-direction: column;
   max-height: 500px;
   margin: 0 -10px 40px -10px;
+  position: relative;
+  & .block-left {
+    position: absolute;
+    right: -150px;
+    top: -50px;
+  }
   cursor: pointer;
   &__room {
     color: #8A8888; 
@@ -966,6 +1030,7 @@ main {
   &:hover {
     box-shadow: none;
     transition: box-shadow .9s;
+    opacity: 1;
   }
 
   &.active {
@@ -973,6 +1038,7 @@ main {
     position: relative;
     height: 500px;
     box-shadow: none;
+    transition: $transition;
 
     .background {
       position: absolute;
@@ -985,7 +1051,10 @@ main {
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      opacity: 0.2;
+      transition: $transition;
     }
+
 
     .hotels__star {
       width: 21px;
@@ -1667,5 +1736,60 @@ main {
   }
   &__left {
     max-width: 700px;
+  }
+}
+
+.about-project {
+  display: flex;
+  margin: 0 -10px;
+  .about-project__item {
+    flex: 1 1 48%;
+    margin: 10px;
+  }
+}
+
+.info-hotel {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  &__item {
+    flex: 0 0 13%;
+    margin: 10px;
+    text-align: center;
+  }
+  &__img {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
+
+.info-block {
+  background: #F1F1F1;
+  padding: 35px 0;
+  position: relative;
+  & .text {
+    padding: 30px 0;
+  }
+  & .block-center {
+    position: absolute;
+    top: -90px;
+    right: -15%;
+    transform: scale(1.4)
+  }
+}
+
+
+@media screen and (max-width: 1100px) {
+  .block-right-main,
+  .block-left-main,
+  .block-center-main,
+  .block-right,
+  .block-left,
+  .block-center {
+    display: none;
   }
 }

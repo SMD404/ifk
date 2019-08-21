@@ -8,6 +8,7 @@ mixin nav(data)
       .main-menu__item(class=addClass('menu-item', item.mods, item.addClass))
         a(href=item.link)
           !=item.text
+          .submenu-btn 
         if item.subs
           .submenu
             each sub in item.subs

@@ -90,7 +90,7 @@ $('.gallery').slick({
   nextArrow: '.next-gallery',
   responsive: [
     {
-      breakpoint: 1250,
+      breakpoint: 1500,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -101,7 +101,7 @@ $('.gallery').slick({
       }
     },
     {
-      breakpoint: 992,
+      breakpoint: 1400,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
@@ -201,4 +201,10 @@ $('.slick-subscribe').slick({
   ]
 })
 
+$('.humburger').on('click', function(){
+  $('.main-menu').toggleClass('active')
+})
 
+$(document).ready(function(){
+
+})

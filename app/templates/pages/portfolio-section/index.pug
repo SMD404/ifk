@@ -1,0 +1,105 @@
+extends ../../template/services
+
+block body
+  main
+    +banner({
+      link: '../img/banner.png',
+      items: [{
+        addClass: 'banner-services',
+        mods: ['no-padding']
+      }]
+    })
+      +breadcrumbs
+      +title({
+      mods: ['banner'],
+      text: 'ГК корпоративного университета Сбербанка'
+      })
+      .desc За 10 лет мы накопили большой опыт в управлении бизнесом который поможет добиться успеха вашему бизнесу
+      +button({
+        mods: ['red'],
+        text: ['Отправить заявку']
+      })
+      img(src="../img/small-block.png", alt="" class="block-left")
+      img(src="../img/medium-block.png", alt="" class="block-center")
+      img(src="../img/medium-block.png", alt="" class="block-right")
+    
+  .container
+    +title({
+      text: 'ГК корпоративного университета Сбербанка:'
+    })
+    .info-hotel
+      .info-hotel__item
+        .info-hotel__img
+          img(src="../img/building.png")
+        .info-hotel__text Количество номеров
+      .info-hotel__item
+        .info-hotel__img
+          img(src="../img/stars-hotel.png")
+        .info-hotel__text Звездность
+      .info-hotel__item
+        .info-hotel__img
+          img(src="../img/building.png")
+        .info-hotel__text Количество номеров
+      .info-hotel__item
+        .info-hotel__img
+          img(src="../img/building.png")
+        .info-hotel__text Количество номеров
+      .info-hotel__item
+        .info-hotel__img
+          img(src="../img/building.png")
+        .info-hotel__text Количество номеров
+      .info-hotel__item
+        .info-hotel__img
+          img(src="../img/building.png")
+        .info-hotel__text Количество номеров
+    section.segment
+      .about-project
+        .about-project__item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+        .about-project__item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+  section.segment
+    .info-block
+      .container
+          img(src="../img/medium-block.png", alt="" class="block-center")
+          +title({
+              text: 'Участие IFK HM'
+            })
+          .text.text-grey Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+          .info-hotel
+            .info-hotel__item
+              .info-hotel__img
+                img(src="../img/building.png")
+              .info-hotel__text Количество номеров
+            .info-hotel__item
+              .info-hotel__img
+                img(src="../img/stars-hotel.png")
+              .info-hotel__text Звездность
+            .info-hotel__item
+              .info-hotel__img
+                img(src="../img/building.png")
+              .info-hotel__text Количество номеров
+            .info-hotel__item
+              .info-hotel__img
+                img(src="../img/building.png")
+              .info-hotel__text Количество номеров
+            .info-hotel__item
+              .info-hotel__img
+                img(src="../img/building.png")
+              .info-hotel__text Количество номеров
+            .info-hotel__item
+              .info-hotel__img
+                img(src="../img/building.png")
+              .info-hotel__text Количество номеров
+            .text.text-grey Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+    .container
+      +title({
+      text: 'Галлерея'
+       })
+      .gallery-wrapper
+        .gallery
+          a.gallery__item(data-fancybox="gallery" style="background:url(../img/gallery.png)" href="../img/gallery.png")
+          a.gallery__item(data-fancybox="gallery" style="background:url(../img/gallery.png)" href="../img/gallery.png")
+          a.gallery__item(data-fancybox="gallery" style="background:url(../img/gallery.png)" href="../img/gallery.png")
+          a.gallery__item(data-fancybox="gallery" style="background:url(../img/gallery.png)" href="../img/gallery.png")
+        .button-gallery
+          button(type="button" class="prev-gallery")
+          button(type="button" class="next-gallery")

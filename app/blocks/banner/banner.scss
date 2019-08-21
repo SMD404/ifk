@@ -7,7 +7,6 @@
   margin-bottom: 50px;
   overflow: hidden;
   background: linear-gradient(0deg, white 22%, #e5e5e5 86%);
-  padding-bottom: 70px;
     &-inner {
       max-width: 1140px;
       width: 100%;
@@ -22,7 +21,6 @@
 }
 
 .banner-background {
-  top: -130px;
   position: absolute;
   height: 550px;
   width: 100%;
@@ -56,7 +54,6 @@
 .banner-services {
   height: 100%;
   background-size: cover;
-  top: 0;
   padding-top: 30px;
   box-sizing: border-box;
 }
