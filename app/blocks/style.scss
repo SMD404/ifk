@@ -228,18 +228,6 @@ main {
       cursor: pointer;
       position: relative;
 
-      &:nth-of-type(2) {
-        order: -4;
-      }
-
-      &:nth-of-type(3) {
-        order: -3;
-      }
-
-      &:nth-of-type(4) {
-        order: -2;
-      }
-
       @media screen and (max-width: 500px) {
         padding: 35px 15px;
       }
@@ -282,8 +270,8 @@ main {
       padding: 36px;
       box-sizing: border-box;
       justify-content: flex-start;
+      align-items: center;
       flex-wrap: wrap;
-      order: -1;
 
       & .text {
         max-width: 472px;
@@ -309,6 +297,9 @@ main {
   display: flex;
   margin: 15px 0;
   transition: $transition;
+  &_width{
+    max-width: 300px;
+  }
 }
 
 .gray-line {
@@ -367,7 +358,6 @@ main {
 .callback-form {
   position: relative;
   background: #F1F1F1;
-  margin: 70px 0;
 
   & .callback__close {
     display: none;
@@ -396,6 +386,9 @@ main {
 
   & .callback__input-wrap_small {
     flex: 1 1 270px;
+  }
+  & .title{
+    border-bottom: 1px solid $red;
   }
 }
 
@@ -473,6 +466,16 @@ main {
         transition: $transition;
       }
     }
+  }
+}
+
+.segment {
+  padding: 70px 0;
+  &_sm {
+    padding: 50px 0;
+  }
+  &_bg-gray {
+    background: #F1F1F1;
   }
 }
 
@@ -618,6 +621,7 @@ main {
   transition: $transition;
   top: 60%;
   left: 20px;
+  z-index: 9999;  
 
   &:hover {
     background: $red;
@@ -652,6 +656,16 @@ main {
   top: 0;
   right: 0;
   max-width: 77px;
+  &:before {
+    content: '';
+    background-image: url('../img/search-lupe.svg');
+    position: absolute;
+    top: 10px;
+    left: 44%;
+    width: 23px;
+    height: 23px;
+    background-repeat: no-repeat;
+  }
 }
 
 .input-search {
@@ -683,9 +697,17 @@ main {
 .footer-center {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 10px;
+  margin: 0 70px;
   font-size: 14px;
   font-weight: bold;
+  width: 100%;
+  justify-content: flex-end;
+  @media screen and (max-width: 500px){
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
   &__item {
     text-decoration: none;
@@ -707,7 +729,6 @@ main {
 .container-banner {
   background: linear-gradient(0deg, rgba(255, 255, 255, 1) 22%, rgba(229, 229, 229, 1) 86%);
   min-height: 150px;
-  margin-bottom: 50px;
   padding-top: 50px;
 }
 
@@ -730,7 +751,8 @@ main {
     border-bottom: 1px solid $red;
     overflow: hidden;
     max-width: 450px;
-    margin: 20px 0;
+    display: inline-block;
+    margin: 0;
   }
 
   & blockquote {
@@ -818,8 +840,15 @@ main {
   flex-wrap: wrap;
   flex-direction: column;
   max-height: 500px;
-  margin: 50px -10px 50px -10px;
+  margin: 0 -10px 40px -10px;
   cursor: pointer;
+  &__room {
+    color: #8A8888; 
+  }
+
+  &__link:hover{
+    text-decoration: none;
+  }
 
   &__item {
     max-width: calc(33% - 20px);
@@ -1229,7 +1258,7 @@ main {
 
 .subscribe-right {
   position: absolute;
-  top: -100px;
+  top: -150px;
   right: 0;
 
   @media screen and(max-width: 768px) {
@@ -1237,6 +1266,10 @@ main {
     top: 0;
     width: 100%;
   }
+}
+
+.link-copyright:hover {
+  text-decoration: none;
 }
 
 .object {
@@ -1263,11 +1296,25 @@ main {
     justify-content: center;
   }
 
+  &__time {
+    padding: 20px 0;
+    position: relative;
+  }
+
+  &__iko {
+    padding: 0 0 20px 0;
+  }
+
+  &__adress {
+    padding: 20px 0;
+  }
+
   &-map {
     max-width: 520px;
     max-height: 315px;
     flex: 1 1 50%;
   }
+
 
   &-information {
     display: flex;
@@ -1593,5 +1640,32 @@ main {
       height: 50px;
       margin-bottom: 20px;
     }
+  }
+}
+
+.call-block {
+  display: flex;
+  justify-content: flex-start;
+  &__right {
+    background:$black;
+    color: $white;
+    max-width: 419px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    & .call-block__callback {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-image: '../img/black-back.png';
+    }
+  }
+  &__left {
+    max-width: 700px;
   }
 }

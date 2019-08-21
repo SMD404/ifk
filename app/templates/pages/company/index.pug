@@ -15,40 +15,41 @@ block body
       text: 'IFK Hotel Management – ваш партнер в гостиничном бизнесе'
       })
       .desc Наша задача – выстроить комплексную работу вашей гостиницы, повысить ее прибыльность в условиях конкурентной среды.
-    .container
-      +title({
-        text: 'История бренда'
-      })
-      .history
-        .history-block-top
-          .history-block-top__item
-            +icon({
-              icon: 'history'
-            })
-            .history__text В штате мы собрали профильных специалистов, которые могут подключиться к работе на любом этапе        
-          .history-block-top__item
-            +icon({
-              icon: 'history-2'     
-            })
-            .history__text Наши эксперты имеют опыт работы в ведущих международных и отечественных компаниях
-        .history-block-center
-          .history-block-center__line
-        .history-block-bottom
-          .history-block-bottom__item
-            +icon({
-              icon: 'history-3'
+    section.segment
+      .container
+        +title({
+          text: 'История бренда'
+        })
+        .history
+          .history-block-top
+            .history-block-top__item
+              +icon({
+                icon: 'history'
               })
-            .history__text Управляющая компания IFK Hotel Management основана в 2008 году
-          .history-block-bottom__item
-            +icon({
-              icon: 'history-4'
+              .history__text В штате мы собрали профильных специалистов, которые могут подключиться к работе на любом этапе        
+            .history-block-top__item
+              +icon({
+                icon: 'history-2'     
               })
-            .history__text От проекта гостиницы до управления готовым объектом
-          .history-block-bottom__item
-            +icon({
-              icon: 'history-5'
-              })
-            .history__text У нас есть навыки развития бизнеса с учетом региональной специфики  
+              .history__text Наши эксперты имеют опыт работы в ведущих международных и отечественных компаниях
+          .history-block-center
+            .history-block-center__line
+          .history-block-bottom
+            .history-block-bottom__item
+              +icon({
+                icon: 'history-3'
+                })
+              .history__text Управляющая компания IFK Hotel Management основана в 2008 году
+            .history-block-bottom__item
+              +icon({
+                icon: 'history-4'
+                })
+              .history__text От проекта гостиницы до управления готовым объектом
+            .history-block-bottom__item
+              +icon({
+                icon: 'history-5'
+                })
+              .history__text У нас есть навыки развития бизнеса с учетом региональной специфики  
     +mission({
       title: 'Наша миссия',
       text: 'Используя наши ресурсы и знания, увеличивать ценность инвестиций наших партнеров, предоставляя им качественные услуги по управлению гостиницами. Мы ценим и уважаем индивидуальные различия и уникальность. Мы объединяем людей, связанных с индустрией гостеприимства. На основе взаимного доверия и открытости выстраиваем долгосрочные взаимоотношения, способствующие наилучшей реализации потенциала гостиничных объектов в нашем управлении.'
@@ -128,11 +129,13 @@ block body
             })
               .desc.text-black Генеральный директор
             .text Используя наши ресурсы и знания, увеличивать ценность инвестиций наших партнеров, предоставляя им качественные услуги по управлению гостиницами. Мы ценим и уважаем индивидуальные различия и уникальность. Мы объединяем людей, связанных с индустрией гостеприимства. На основе взаимного доверия и открытости выстраиваем долгосрочные взаимоотношения, способствующие наилучшей реализации потенциала гостиничных объектов в нашем управлении.
-  .container
-    +title({
-      text: 'Почему мы?'
-    })
-    .text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc ege
+  section.segment
+    .container
+      +title({
+        text: 'Почему мы?',
+        mods: ['page']
+      })
+      .text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc ege
   .container
     +title({
     text: 'Наши проекты'

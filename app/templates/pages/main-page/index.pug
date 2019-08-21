@@ -1,4 +1,4 @@
-extends ../../template/services
+extends ../../template/main-page-new
 
 block body
   main
@@ -20,7 +20,8 @@ block body
     .container
       .we-doing
         +title({
-          text: 'Что мы делаем?'
+          text: 'Что мы делаем?',
+          mods: ['page']
         })
         .we-doing-items
           .we-doing__item.item_gray
@@ -30,7 +31,7 @@ block body
               mods: ['item'],
               text: 'Контроль проектов'
             })
-            span.red-line
+            span.red-line.red-line_width
             .text Возьмём вашу гостиницу в управление на любой стадии её существования: действующую, строящуюся, проектируемую или даже только планируемую.
           .we-doing__item.item_gray
             a(href="#")
@@ -39,7 +40,7 @@ block body
               mods: ['item'],
               text: 'Контроль проектов'
             })
-            span.red-line
+            span.red-line.red-line_width
             .text Возьмём вашу гостиницу в управление на любой стадии её существования: действующую, строящуюся, проектируемую или даже только планируемую.
           .we-doing__item.item_gray
             a(href="#")
@@ -48,7 +49,7 @@ block body
                 mods: ['item'],
                 text: 'Контроль проектов'
               })
-              span.red-line
+              span.red-line.red-line_width
               .text Возьмём вашу гостиницу в управление на любой стадии её существования: действующую, строящуюся, проектируемую или даже только планируемую.
           .we-doing__item.item_gray
             a(href="#")
@@ -57,7 +58,7 @@ block body
                 mods: ['item'],
                 text: 'Контроль проектов'
               })
-              span.red-line
+              span.red-line.red-line_width
               .text Возьмём вашу гостиницу в управление на любой стадии её существования: действующую, строящуюся, проектируемую или даже только планируемую.
   .callback-form
       .container
@@ -84,136 +85,140 @@ block body
               }]
           }]
         })
-  .container
-    .hotels
-      .hotels__item.active
-        .background(style=('background-image: url(../img/banner_hotels.png)'))
-        .hotels__title ГК Корпоративного университета Сбербанка
-        .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
-        .hotels__stars
-          +icon({
-            addClass: 'hotels__star',
-            icon: 'star'
-          })
-          +icon({
-            addClass: 'hotels__star',
-            icon: 'star'
-          })
-          +icon({
-            addClass: 'hotels__star',
-            icon: 'star'
-          })
-          +icon({
-            addClass: 'hotels__star',
-            icon: 'star'
-          })
-        .hotels__info
-          .hotels__room 148 номеров
-          a(href='#').hotels__link Подбробнее
+  section.segment
+    .container
+      +title({
+        text: 'Наши проекты',
+        mods: ['page']
+      })
+      .hotels
+        .hotels__item.active
+          .background(style=('background-image: url(../img/banner_hotels.png)'))
+          .hotels__title ГК Корпоративного университета Сбербанка
+          .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
+          .hotels__stars
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+          .hotels__info
+            .hotels__room 148 номеров
+            a(href='#').hotels__link Подбробнее
 
-      .hotels__item
-        .background(style=('background-image: url(../img/banner_hotels.png)'))
-        .hotels__title Блок 2
-        .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
-        .hotels__stars
-          +icon({
-            addClass: 'hotels__star',
-            icon: 'star'
-          })
-          +icon({
-            addClass: 'hotels__star',
-            icon: 'star'
-          })
-          +icon({
-            addClass: 'hotels__star',
-            icon: 'star'
-          })
-          +icon({
-            addClass: 'hotels__star',
-            icon: 'star'
-          })
-        .hotels__info
-          .hotels__room 148 номеров
-          a(href='#').hotels__link Подбробнее
+        .hotels__item
+          .background(style=('background-image: url(../img/banner_hotels.png)'))
+          .hotels__title GOLDEN TULIP ROSA KHUTOR
+          .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
+          .hotels__stars
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+          .hotels__info
+            .hotels__room 148 номеров
+            a(href='#').hotels__link Подбробнее
 
-      .hotels__item
-        .background(style=('background-image: url(../img/banner_hotels.png)'))
-        .hotels__title Блок 3
-        .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
-        .hotels__stars
-          +icon({
-            addClass: 'hotels__star',
-            icon: 'star'
-          })
-          +icon({
-            addClass: 'hotels__star',
-            icon: 'star'
-          })
-          +icon({
-            addClass: 'hotels__star',
-            icon: 'star'
-          })
-          +icon({
-            addClass: 'hotels__star',
-            icon: 'star'
-          })
-        .hotels__info
-          .hotels__room 148 номеров
-          a(href='#').hotels__link Подбробнее
+        .hotels__item
+          .background(style=('background-image: url(../img/banner_hotels.png)'))
+          .hotels__title GOLDEN TULIP ROSA KHUTOR
+          .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
+          .hotels__stars
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+          .hotels__info
+            .hotels__room 148 номеров
+            a(href='#').hotels__link Подбробнее
 
-      .hotels__item
-        .background(style=('background-image: url(../img/banner_hotels.png)'))
-        .hotels__title Блок 4
-        .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
-        .hotels__stars
-          +icon({
-            addClass: 'hotels__star',
-            icon: 'star'
-          })
-          +icon({
-            addClass: 'hotels__star',
-            icon: 'star'
-          })
-          +icon({
-            addClass: 'hotels__star',
-            icon: 'star'
-          })
-          +icon({
-            addClass: 'hotels__star',
-            icon: 'star'
-          })
-        .hotels__info
-          .hotels__room 148 номеров
-          a(href='#').hotels__link Подбробнее
-
-      .hotels__item
-        .background(style=('background-image: url(../img/banner_hotels.png)'))
-        .hotels__title Блок 5
-        .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета
-        .hotels__stars
-          +icon({
-            addClass: 'hotels__star',
-            icon: 'star'
-          })
-          +icon({
-            addClass: 'hotels__star',
-            icon: 'star'
-          })
-          +icon({
-            addClass: 'hotels__star',
-            icon: 'star'
-          })
-          +icon({
-            addClass: 'hotels__star',
-            icon: 'star'
-          })
-        .hotels__info
-          .hotels__room 148 номеров
-          a(href='#').hotels__link Подбробнее
-    +button({
-      text: 'Посмотреть все проекты',
-      mods: ['center']
-    })
+        .hotels__item
+          .background(style=('background-image: url(../img/banner_hotels.png)'))
+          .hotels__title GOLDEN TULIP ROSA KHUTOR
+          .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета и с учётом решаемых задач. Инновационная образовательная среда, включающая разнообразные возможности.
+          .hotels__stars
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+          .hotels__info
+            .hotels__room 148 номеров
+            a(href='#').hotels__link Подбробнее
+        .hotels__item
+          .background(style=('background-image: url(../img/banner_hotels.png)'))
+          .hotels__title GOLDEN TULIP ROSA KHUTOR
+          .hotels__desc Кампус спроектирован в контексте философии Корпоративного университета
+          .hotels__stars
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+            +icon({
+              addClass: 'hotels__star',
+              icon: 'star'
+            })
+          .hotels__info
+            .hotels__room 148 номеров
+            a(href='#').hotels__link Подбробнее
+      +button({
+          text: 'Посмотреть все проекты',
+          mods: ['center']
+        })
 
   +subscribe({
       background: '../img/subscribe.png',

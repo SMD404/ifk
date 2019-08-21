@@ -7,22 +7,23 @@ block body
         +breadcrumbs
         +title({
               text: 'Контакты',
-              addClass: 'title__blog',
+              mods: ['page','center']
             })
-      .container
-        .contacts
-          .contacts-map
-            iframe(src="https://yandex.ru/map-widget/v1/-/CGvpjFl1" width="100%" height="100%" frameborder="0" allowfullscreen="true")
-          .contacts-information
-            .contacts-information__left 
-              a.contacts__phone(href="tel:+74957877001") +74957877001
-              .contacts__time пн-пт 09:00 - 18:00, обед 12:00 - 13:00
-              .contacts__adress УЛ. ВАВИЛОВА, Д. 7 МОСКВА, 117312, РОССИЯ
-              a.contacts__mail(href="mailto:info@ifk-hm.ru") info@ifk-hm.ru
-            .contacts-information__right
-              .contacts__inn ИНН: 5035026746
-              .contacts__kpp КПП: 503501001
-              .contacts__ogrn ОГРН 1155035000185
+      section.segment
+        .container
+          .contacts
+            .contacts-map
+              iframe(src="https://yandex.ru/map-widget/v1/-/CGvpjFl1" width="100%" height="100%" frameborder="0" allowfullscreen="true")
+            .contacts-information
+              .contacts-information__left 
+                a.contacts__phone(href="tel:+74957877001") +74957877001
+                .contacts__time пн-пт 09:00 - 18:00, обед 12:00 - 13:00
+                .contacts__adress УЛ. ВАВИЛОВА, Д. 7 МОСКВА, 117312, РОССИЯ
+                a.contacts__mail(href="mailto:info@ifk-hm.ru") info@ifk-hm.ru
+              .contacts-information__right
+                .contacts__iko ИНН: 5035026746
+                .contacts__iko КПП: 503501001
+                .contacts__iko ОГРН 1155035000185
   .callback-form
       .container
         +callback({

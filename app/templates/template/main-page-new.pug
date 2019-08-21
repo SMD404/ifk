@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="../css/style.css")
+    link(rel="stylesheet", href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css")
+    link(rel="stylesheet", href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css")
+    link(rel="stylesheet", href="../css/jquery.fancybox.min.css")
+    title ifk-hm
+  body.default-font
+  
+block includes
+  include ../../blocks/logo/logo
+  include ../../blocks/button/button
+  include ../../blocks/nav/nav
+  include ../../blocks/banner/banner
+  include ../../blocks/breadcrumbs/breadcrumbs
+  include ../../blocks/title/title
+  include ../../blocks/subscribe/subscribe
+  include ../../blocks/input/input
+  include ../../blocks/container/container
+  include ../../blocks/callback/callback
+  include ../../blocks/icon/icon
+
+block header
+  header.header
+    .header__inner
+      .header__left
+        +logo({
+        link_image: '../img/logo.png'
+        })
+
+      .header-center
+        +nav({
+          items: [{
+            text: 'Услуги',
+            link: '#',
+              subs: [{
+                text: 'Управление гостиницами',
+                link: '#',
+              },
+              {
+                text: 'Техническое сопровождение',
+                link: '#',
+              },
+              {
+                text: 'Гостиничный франчайзинг',
+                link: '#',
+              },
+              {
+                text: 'Предпроектное консультирование',
+                link: '#',
+              }],
+            },
+            {
+            text: 'Портфолио',
+            link: '#',
+              subs: [{
+                text: 'Управление гостиницами',
+                link: '#',
+              },
+              {
+                text: 'Техническое сопровождение',
+                link: '#',
+              },
+              {
+                text: 'Гостиничный франчайзинг',
+                link: '#',
+              },
+              {
+                text: 'Предпроектное консультирование',
+                link: '#',
+              }],
+            },
+            {
+              text: 'О компании',
+              link: '#',
+            },
+            {
+              text: 'Контакты',
+              link: '#',
+            },
+            {
+              text: 'Блог',
+              link: '#',
+          }]
+        })
+
+      .header-right
+        a(href="tel:74957877001").header-phone + 7 (495) 787-70-01
+        +button({
+        mods: ['header'],
+        text: 'Заказать звонок',
+        })
+        .header-swap-lang
+          +icon({
+            icon: 'globus'
+          })
+block body
+  main
+
+block footer
+  //- +subscribe({
+  //-   background: '../img/subscribe.png',
+  //-   items: [{
+  //-     mods: ['wrapper']
+  //-   }]
+  //- })
+  //-   +title({
+  //-   mods: ['subscribe'],
+  //-   text: 'Управление гостиничным бизнесом',
+  //-   addClass: 'text-white'
+  //-   })
+  //-   +input({
+  //-     items: [{
+  //-       mods: ['subscribe'],
+  //-       placeholder: 'Ваше имя',
+  //-   },
+  //-   {
+  //-     mods: ['subscribe'],
+  //-     placeholder: 'Ваш e-mail',
+  //-   }]
+  //- })
+  //-   +button({
+  //-       mods: ['red'],
+  //-       addClass: 'sub-button',
+  //-       text: ['Отправить заявку']
+  //-     })
+  footer.footer
+    .footer__hidden
+      .overlay(close-button)
+      //- +callback({
+      //-   title: 'Оставить заявку ',
+      //-   policy: 'Нажимая на кнопку “Отправить” вы соглашаетесь на обработку персональных данных',
+      //-   wraps: [{
+      //-     mods: ['small'],
+      //-     inputs: [{
+      //-       placeholder: 'Ваше имя',
+      //-       tag: 'input',
+      //-       type: 'text'
+      //-     },{
+      //-       placeholder: 'Ваш e-mail',
+      //-       tag: 'input',
+      //-       type: 'email'
+      //-     },{
+      //-       placeholder: 'Ваш телефон',
+      //-       tag: 'input',
+      //-       type: 'tel'
+      //-     }]
+      //-   },{
+      //-     inputs: [{
+      //-       placeholder: '123',
+      //-       tag: 'select',
+      //-       selects: [{
+      //-         text: 'Номер 1',
+      //-       },{
+      //-         text: 'Номер 1',
+      //-       },{
+      //-         text: 'Номер 1',
+      //-       },{
+      //-         text: 'Номер 1',
+      //-       }]         
+      //-     },{
+      //-       mods: ['big'],
+      //-       placeholder: 'Опишите ваши пожелания',
+      //-       tag: 'textarea'
+      //-     }]
+      //-   }]
+      //- })
+
+      +callback({
+        title: 'Заказать звонок',
+        policy: 'Нажимая на кнопку “Отправить” вы соглашаетесь на обработку персональных данных',
+        wraps: [{
+          mods: ['medium'],
+          inputs: [{
+            placeholder: 'Ваше имя',
+            tag: 'input',
+            type: 'text'
+          }]
+        },{
+          inputs: [{
+            placeholder: 'Ваш телефон',
+            tag: 'input',
+            type: 'tel'  
+          }]
+        }]
+      })
+    
+block footer
+  footer.footer
+    .container
+      .button-top(style="display: none;")
+      .footer-wrapper
+        .footer-left
+          +logo({
+            link_image: '../img/logo.png'
+            })
+
+        .footer-center
+          a.footer-center__item(href="#") Услуги
+          a.footer-center__item(href="#") Портфолио
+          a.footer-center__item(href="#") О компании
+          a.footer-center__item(href="#") Контакты
+          a.footer-center__item(href="#") Блог
+        .footer-right
+          .social
+            a(href="#")
+              +icon({
+                link: '#',
+                addClass: 'soc-link',
+                icon: 'vk',
+              })
+            a(href="#")
+              +icon({
+                link: '#',
+                addClass: 'soc-link',
+                icon: 'fb',
+              })
+            a(href="#")
+              +icon({
+                link: '#',
+                addClass: 'soc-link',
+                icon: 'ok',
+              })
+            a(href="#")
+              +icon({
+                link: '#',
+                addClass: 'soc-link',
+                icon: 'inst',
+              })
+      .footer-copyright-wrapper
+       .footer-copyright
+          .footer-copyright__item © IFK Hotel Management 2008-2018. All Rights Reserved.
+          .footer-copyright-link
+            a.link-copyright(href='#') Политика конфиденциальности
+            a.link-copyright(href='#') Обработка персональных данных
+  div(style='display: none;')
+    include ../../../dist/img/icons/icons.svg
+  script(src="../js/bundle.js")
+  script(src="//code.jquery.com/jquery-3.3.1.min.js")
+  script(src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js")

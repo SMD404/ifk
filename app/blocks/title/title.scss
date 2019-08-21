@@ -2,14 +2,18 @@
   font-weight: bold;
   font-size: 32px;
   line-height: 50px;
-  margin: 25px 0;
   color: $black;
+  display: inline-block;
   &_redline{
     border-bottom: 1px solid $red;
     margin-bottom: 16px;
   }
+  &_page {
+    margin-bottom: 50px;
+  }
   &_center {
     text-align: center;
+    display: block;
     margin: 30px 0 0;
   }
   &_banner{
@@ -22,6 +26,7 @@
     line-height: 29px;
     font-weight: 700;
     text-transform: uppercase;
+    display: block;
   }
   &_callback {
     margin-bottom: 20px;
@@ -36,6 +41,10 @@
   &_subscribe {
     padding-bottom: 20px;
     padding-top:20px;
+    display: block;
+  }
+  & p {
+    margin: 0;
   }
 }
 
