@@ -144,6 +144,7 @@ main {
     width: 25px;
     height: 25px;
     cursor: pointer;
+    margin-left: 20px;
 
     & svg {
       width: 100%;
@@ -512,12 +513,15 @@ main {
 }
 
 .segment {
-  padding: 70px 0;
+  padding: 50px 0;
   &_sm {
     padding: 50px 0;
   }
   &_bg-gray {
     background: #F1F1F1;
+  }
+  &_margin {
+    margin: 30px 0;
   }
 }
 
@@ -785,9 +789,19 @@ main {
 }
 
 .container-banner {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 22%, rgba(229, 229, 229, 1) 86%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 4%, rgba(229, 229, 229, 1) 86%);
   min-height: 150px;
   padding-top: 50px;
+  position: relative;
+  & .block-left {
+    position: absolute;
+    right: 20%;
+  }
+  & .block-center {
+    position: absolute;
+    left: -100px;
+    bottom: -100px
+  }
 }
 
 .article-data {
@@ -1360,14 +1374,37 @@ main {
 .contacts {
   display: flex;
   flex-wrap: wrap;
+  font-size: 18px;
 
   @media screen and (max-width: 992px) {
     justify-content: center;
   }
 
-  &__time {
-    padding: 20px 0;
+  &__phone {
     position: relative;
+    &:before {
+      position: absolute;
+      content: '';
+      background: url(../img/phone-call.svg);
+      background-repeat: no-repeat;
+      width: 25px;
+      height: 25px;
+      left: -40px;
+    }
+  }
+
+  &__time {
+    padding: 20px 0 0 0 ;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: '';
+      background: url(../img/time.svg);
+      background-repeat: no-repeat;
+      width: 25px;
+      height: 25px;
+      left: -40px;
+    }
   }
 
   &__iko {
@@ -1376,6 +1413,29 @@ main {
 
   &__adress {
     padding: 20px 0;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: '';
+      background: url(../img/mark.svg);
+      background-repeat: no-repeat;
+      width: 25px;
+      height: 35px;
+      left: -40px;
+    }
+  }
+
+  &__mail {
+    position: relative;
+    &:before {
+      position: absolute;
+      content: '';
+      background: url(../img/mail.svg);
+      background-repeat: no-repeat;
+      width: 25px;
+      height: 25px;
+      left: -40px;
+    }
   }
 
   &-map {
@@ -1400,17 +1460,21 @@ main {
     &__left {
       flex: 1 1 30%;
       background: #F1F1F1;
-      padding: 38px 30px;
+      padding: 38px 30px 38px 60px;
       box-sizing: border-box;
     }
 
     &__right {
       flex: 1 1 15%;
-      background: rgba(196, 196, 196, 1);
+      background: rgba(196, 196, 196, 0.4);
       padding: 38px 30px;
       box-sizing: border-box;
     }
   }
+}
+
+.m-bottom {
+  margin-bottom: 20px;
 }
 
 .slick-subscribe {
@@ -1662,11 +1726,18 @@ main {
       width: 100%;
       margin: 0 auto;
       display: flex;
+      flex-wrap: wrap;
+      @media screen and (max-width: 1100px) {
+        justify-content: center;
+      }
     }
 
     &__right {
       max-width: 688px;
       margin-left: 140px;
+      @media screen and (max-width: 1100px) {
+        margin: 0 20px;
+      }
     }
 
     &__left {
@@ -1750,7 +1821,7 @@ main {
 
 .info-hotel {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin: 0 -10px;
   &__item {
